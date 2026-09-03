@@ -520,6 +520,61 @@ footer.site::before{
 .regions-live li:nth-child(5){--sd:12.2s}
 .regions-live li:nth-child(6){--sd:15.2s}
 
+/* ---------- regions reach: six territories, led from the UK ---------- */
+.reach-map{position:relative;z-index:3}
+.reach-map svg{display:block;width:100%;max-width:560px;margin:0 auto;height:auto;overflow:visible}
+.reach-map .lat{fill:none;stroke:var(--line-soft);stroke-width:1}
+.reach-map .reach{fill:none;stroke:var(--lime);stroke-width:1.5;stroke-linecap:round;
+  stroke-dasharray:100;stroke-dashoffset:100}
+.reach-map .terr{fill:var(--panel);stroke:var(--lime-deep);stroke-width:1.4}
+.reach-map .tlbl{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:var(--muted-2)}
+.reach-map .ring{fill:none;stroke:var(--lime);stroke-width:1;opacity:0;
+  transform-box:fill-box;transform-origin:center}
+@keyframes cc-reach{0%,2%{stroke-dashoffset:100}9%,15%{stroke-dashoffset:0}17%,100%{stroke-dashoffset:100}}
+@keyframes cc-terr{0%{fill:var(--panel);stroke:var(--lime-deep)}5%,15%{fill:var(--lime);stroke:var(--lime)}17%,100%{fill:var(--panel);stroke:var(--lime-deep)}}
+@keyframes cc-tlbl{0%{fill:var(--muted-2)}5%,15%{fill:var(--lime)}17%,100%{fill:var(--muted-2)}}
+@keyframes cc-tring{0%,4%{opacity:0;transform:scale(.5)}8%{opacity:.85;transform:scale(1)}16%,100%{opacity:0;transform:scale(2.4)}}
+.scope.run .reach-map .reach{animation:cc-reach 18s linear var(--sd,0s) infinite both}
+.scope.run .reach-map .terr{animation:cc-terr 18s linear var(--sd,0s) infinite both}
+.scope.run .reach-map .tlbl{animation:cc-tlbl 18s linear var(--sd,0s) infinite both}
+.scope.run .reach-map .ring{animation:cc-tring 18s linear var(--sd,0s) infinite both}
+.reach-map [data-rg="1"]{--sd:0.2s}
+.reach-map [data-rg="2"]{--sd:3.2s}
+.reach-map [data-rg="3"]{--sd:6.2s}
+.reach-map [data-rg="4"]{--sd:9.2s}
+.reach-map [data-rg="5"]{--sd:12.2s}
+.reach-map [data-rg="6"]{--sd:15.2s}
+
+/* ---------- markets converge: four markets, one practice ---------- */
+.conv{position:relative;z-index:3}
+.conv svg{display:block;width:100%;max-width:560px;margin:0 auto;height:auto;overflow:visible}
+.conv .lane{fill:none;stroke:rgba(227,255,100,.18);stroke-width:1.2}
+.conv .flowl{fill:none;stroke:var(--lime);stroke-width:2;stroke-linecap:round;
+  stroke-dasharray:14 100;stroke-dashoffset:114;opacity:0}
+.conv .mk{fill:var(--panel);stroke:var(--lime-deep);stroke-width:1.4}
+.conv .mlbl{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;fill:var(--muted-2)}
+.conv .hub{fill:var(--panel);stroke:var(--lime);stroke-width:1.6}
+.conv .hubc{fill:var(--lime)}
+.conv .hubring{fill:none;stroke:var(--lime);stroke-width:1;opacity:0;
+  transform-box:fill-box;transform-origin:center}
+.conv .hlbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;fill:var(--lime)}
+@keyframes cc-conv{0%,2%{stroke-dashoffset:114;opacity:0}4%{opacity:1}20%{stroke-dashoffset:0;opacity:1}23%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes cc-cmk{0%{fill:var(--panel);stroke:var(--lime-deep)}4%,22%{fill:var(--lime);stroke:var(--lime)}25%,100%{fill:var(--panel);stroke:var(--lime-deep)}}
+@keyframes cc-clbl{0%{fill:var(--muted-2)}4%,22%{fill:var(--lime)}25%,100%{fill:var(--muted-2)}}
+@keyframes cc-hubring{0%,17%{opacity:0;transform:scale(.6)}21%{opacity:.9;transform:scale(1)}25%,100%{opacity:0;transform:scale(2.2)}}
+.scope.run .conv .flowl{animation:cc-conv 12s linear var(--sd,0s) infinite both}
+.scope.run .conv .mk{animation:cc-cmk 12s linear var(--sd,0s) infinite both}
+.scope.run .conv .mlbl{animation:cc-clbl 12s linear var(--sd,0s) infinite both}
+.scope.run .conv .hubring{animation:cc-hubring 12s linear var(--sd,0s) infinite both}
+.conv [data-mk="1"]{--sd:0s}
+.conv [data-mk="2"]{--sd:3s}
+.conv [data-mk="3"]{--sd:6s}
+.conv [data-mk="4"]{--sd:9s}
+@media(max-width:900px){
+  .reach-map .tlbl,.conv .mlbl{font-size:18px;letter-spacing:.07em}
+  .conv .hlbl{font-size:15px;letter-spacing:.08em}
+}
+
 /* routes: three ways in, one person */
 .routes{display:grid;grid-template-columns:minmax(0,1fr) 62px 96px;align-items:center;gap:0 0}
 @media(max-width:600px){.routes{grid-template-columns:minmax(0,1fr) 40px 78px}}
@@ -727,6 +782,10 @@ footer.site::before{
   .tl .ph{display:none}
   .cyc-cap .cap,.tl-cap .cap{position:static;opacity:1;margin-bottom:12px}
   .regions-live li,.routes .r{opacity:1}
+  .reach-map .reach,.conv .flowl{display:none}
+  .reach-map .terr,.conv .mk{fill:var(--lime);stroke:var(--lime)}
+  .reach-map .tlbl,.conv .mlbl{fill:var(--lime)}
+  .reach-map .ring,.conv .hubring{display:none}
   .seq4 .s,.seq3 .s,.seq5 .s{opacity:1}
   .relay .pulse,.plates .sel,.strail .fill{display:none}
   .dial .arc{stroke-dashoffset:0}
@@ -962,14 +1021,62 @@ footer.site::before{
         <p style="margin-top:28px"><a class="btn btn-ghost" href="#contact">Discuss representation</a></p>
       </div>
       <div>
-        <p class="mono" style="margin-bottom:18px">Regions led</p>
-        <ul class="regions" style="margin-top:0">
-          <li>United Kingdom</li><li>Europe</li><li>North America</li><li>Scandinavia</li><li>Middle East</li><li>Africa</li>
-        </ul>
-        <p class="mono" style="margin:34px 0 18px">Markets served</p>
-        <ul class="regions" style="margin-top:0">
-          <li>Industrial</li><li>Construction</li><li>Marine</li><li>Associated markets</li>
-        </ul>
+        <div class="scope run">
+          <div class="scope-hd"><span>Regions led &nbsp;&middot;&nbsp; <b>Rev A</b></span><span>6 territories</span></div>
+          <div class="scope-body">
+            <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+            <div class="reach-map" role="img" aria-label="Six regions led from the United Kingdom: Europe, North America, Scandinavia, the Middle East and Africa">
+              <svg viewBox="0 0 560 300" aria-hidden="true">
+                <path class="lat" d="M20 92 Q280 74 540 92"/>
+                <path class="lat" d="M20 162 Q280 144 540 162"/>
+                <path class="lat" d="M20 232 Q280 214 540 232"/>
+                <g data-rg="2"><path class="reach" pathLength="100" d="M250 100 Q268 130 300 150"/></g>
+                <g data-rg="3"><path class="reach" pathLength="100" d="M250 100 Q178 96 105 132"/></g>
+                <g data-rg="4"><path class="reach" pathLength="100" d="M250 100 Q278 76 300 68"/></g>
+                <g data-rg="5"><path class="reach" pathLength="100" d="M250 100 Q330 118 380 178"/></g>
+                <g data-rg="6"><path class="reach" pathLength="100" d="M250 100 Q286 170 300 244"/></g>
+                <g data-rg="1"><circle class="ring" cx="250" cy="100" r="9"/><circle class="terr" cx="250" cy="100" r="5.5"/><text class="tlbl" x="238" y="84" text-anchor="end">United Kingdom</text></g>
+                <g data-rg="2"><circle class="ring" cx="300" cy="150" r="9"/><circle class="terr" cx="300" cy="150" r="5"/><text class="tlbl" x="313" y="155" text-anchor="start">Europe</text></g>
+                <g data-rg="3"><circle class="ring" cx="105" cy="132" r="9"/><circle class="terr" cx="105" cy="132" r="5"/><text class="tlbl" x="105" y="158" text-anchor="middle">North America</text></g>
+                <g data-rg="4"><circle class="ring" cx="300" cy="68" r="9"/><circle class="terr" cx="300" cy="68" r="5"/><text class="tlbl" x="313" y="64" text-anchor="start">Scandinavia</text></g>
+                <g data-rg="5"><circle class="ring" cx="380" cy="178" r="9"/><circle class="terr" cx="380" cy="178" r="5"/><text class="tlbl" x="393" y="183" text-anchor="start">Middle East</text></g>
+                <g data-rg="6"><circle class="ring" cx="300" cy="244" r="9"/><circle class="terr" cx="300" cy="244" r="5"/><text class="tlbl" x="313" y="249" text-anchor="start">Africa</text></g>
+              </svg>
+            </div>
+          </div>
+          <p class="scope-note">Sales, service and parts teams led in all six</p>
+        </div>
+
+        <div class="scope run" style="margin-top:24px">
+          <div class="scope-hd"><span>Markets served &nbsp;&middot;&nbsp; <b>Rev A</b></span><span>4 markets, one practice</span></div>
+          <div class="scope-body">
+            <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+            <div class="conv" role="img" aria-label="Four markets served, industrial, construction, marine and associated markets, all handled by one person">
+              <svg viewBox="0 0 560 282" aria-hidden="true">
+                <path class="lane" d="M46 46 C240 46 380 98 452 124"/>
+                <path class="lane" d="M46 106 C240 106 390 120 452 127"/>
+                <path class="lane" d="M46 166 C240 166 390 140 452 130"/>
+                <path class="lane" d="M46 226 C240 226 380 160 452 133"/>
+                <g data-mk="1"><path class="flowl" pathLength="100" d="M46 46 C240 46 380 98 452 124"/></g>
+                <g data-mk="2"><path class="flowl" pathLength="100" d="M46 106 C240 106 390 120 452 127"/></g>
+                <g data-mk="3"><path class="flowl" pathLength="100" d="M46 166 C240 166 390 140 452 130"/></g>
+                <g data-mk="4"><path class="flowl" pathLength="100" d="M46 226 C240 226 380 160 452 133"/></g>
+                <g data-mk="1"><rect class="mk" x="40" y="40" width="12" height="12"/><text class="mlbl" x="40" y="28">Industrial</text></g>
+                <g data-mk="2"><rect class="mk" x="40" y="100" width="12" height="12"/><text class="mlbl" x="40" y="88">Construction</text></g>
+                <g data-mk="3"><rect class="mk" x="40" y="160" width="12" height="12"/><text class="mlbl" x="40" y="148">Marine</text></g>
+                <g data-mk="4"><rect class="mk" x="40" y="220" width="12" height="12"/><text class="mlbl" x="40" y="208">Associated markets</text></g>
+                <g data-mk="1"><circle class="hubring" cx="470" cy="128" r="14"/></g>
+                <g data-mk="2"><circle class="hubring" cx="470" cy="128" r="14"/></g>
+                <g data-mk="3"><circle class="hubring" cx="470" cy="128" r="14"/></g>
+                <g data-mk="4"><circle class="hubring" cx="470" cy="128" r="14"/></g>
+                <circle class="hub" cx="470" cy="128" r="13"/>
+                <circle class="hubc" cx="470" cy="128" r="4.5"/>
+                <text class="hlbl" x="452" y="186" text-anchor="end">One point of contact</text>
+              </svg>
+            </div>
+          </div>
+          <p class="scope-note">Every market runs through Graham, not a team</p>
+        </div>
       </div>
     </div>
   </div></div>
