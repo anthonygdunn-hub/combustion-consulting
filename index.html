@@ -108,11 +108,10 @@ hr{border:0;border-top:1px solid var(--line-soft);margin:0}
   -webkit-mask-image:linear-gradient(270deg,#000 0%,rgba(0,0,0,.5) 40%,transparent 82%);
   mask-image:linear-gradient(270deg,#000 0%,rgba(0,0,0,.5) 40%,transparent 82%)}
 .band>.wrap,.proof>.wrap,.ctaband>.wrap,footer.site>.wrap{position:relative;z-index:1}
-/* on narrow screens pull the field back to the very edge so it never sits under text */
+/* the dot field is a desktop treatment only, there is no margin to spare on a phone */
 @media(max-width:760px){
-  .band::before,.ctaband::before{width:52px;opacity:.42}
-  footer.site::before{opacity:.34}
-  .proof::before{opacity:.3}
+  .band::before,.proof::before,.ctaband::before,footer.site::before,
+  .plate figure::before,.dots{display:none}
 }
 .band-alt{background:var(--ink-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
 
@@ -178,11 +177,6 @@ nav.main a.navcta:hover{color:#0a0c09}
   -webkit-mask-image:radial-gradient(42% 80% at -6% 58%,#000 0%,rgba(0,0,0,.78) 46%,transparent 84%);
   mask-image:radial-gradient(42% 80% at -6% 58%,#000 0%,rgba(0,0,0,.78) 46%,transparent 84%);
   opacity:1}
-@media(max-width:760px){
-  .dots{right:auto;width:58px;opacity:.6;
-    -webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.45) 45%,transparent 100%);
-    mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.45) 45%,transparent 100%)}
-}
 .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.9fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:clamp(46px,6vw,80px);padding-bottom:clamp(40px,5vw,72px)}
 @media(max-width:940px){.hero .wrap{grid-template-columns:1fr;align-items:start}}
 
