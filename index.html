@@ -690,7 +690,7 @@ footer.site{border-top:1px solid var(--line);background:#050705;padding:clamp(46
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="railbar" aria-hidden="true"><em></em><span>Combustion Consulting</span></div>
+<div class="railbar" aria-hidden="true"><em></em></div>
 
 
 
@@ -1630,7 +1630,6 @@ footer.site{border-top:1px solid var(--line);background:#050705;padding:clamp(46
   var pages = ['home','services','track','about','contact'];
   var nav = document.getElementById('nav');
   var burger = document.querySelector('.burger');
-  var rail = document.querySelector('.railbar span');
 
   function show(id){
     if(pages.indexOf(id) === -1){ id = 'home'; }
@@ -1643,7 +1642,6 @@ footer.site{border-top:1px solid var(--line);background:#050705;padding:clamp(46
       if(t === id){ a.setAttribute('aria-current','page'); } else { a.removeAttribute('aria-current'); }
     });
     var n = pages.indexOf(id) + 1;
-    if(rail){ rail.textContent = 'Combustion Consulting'; }
     document.title = id === 'home' ? 'Combustion Consulting' : 'Combustion Consulting';
     nav.classList.remove('open');
     burger.setAttribute('aria-expanded','false');
