@@ -1,5 +1,21 @@
-<title>Page not found</title>
+<!doctype html>
+<meta charset="utf-8">
+<title>Redirecting - Combustion Consulting</title>
+<meta name="robots" content="noindex">
 <link rel="canonical" href="https://www.combustionconsulting.co.uk/">
-<meta http-equiv="refresh" content="0;url=https://www.combustionconsulting.co.uk/">
-<script>location.replace("https://www.combustionconsulting.co.uk/")</script>
-<p>That page has moved. <a href="https://www.combustionconsulting.co.uk/">Go to the home page</a>.</p>
+<style>html{background:#070907;color:#F1F3E9;font:15px/1.5 system-ui,sans-serif}body{margin:0;display:grid;place-items:center;min-height:100vh;padding:24px}a{color:#E3FF64}</style>
+<script>
+(function(){
+  var map={
+    'services':'#services','our-services':'#services','ourservices':'#services',
+    'contact':'#contact','contact-us':'#contact','contactus':'#contact',
+    'about':'#about','about-us':'#about','copy-of-our-services':'#about',
+    'track-record':'#track','results':'#track','home':'',
+    'thanks':'thanks.html','thank-you':'thanks.html'
+  };
+  var p=location.pathname.replace(/^\/+|\/+$/g,'').toLowerCase();
+  var t=map.hasOwnProperty(p)?map[p]:'';
+  location.replace('https://www.combustionconsulting.co.uk/'+t);
+})();
+</script>
+<p>Taking you to the right page. <a href="https://www.combustionconsulting.co.uk/">Combustion Consulting</a></p>
