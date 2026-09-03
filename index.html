@@ -1,0 +1,1790 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Combustion Consulting</title>
+<meta name="description" content="Product sales planning, aftersales and service strategy for industrial diesel engines. Led by Graham Dunn, in industrial power since 1975.">
+<link rel="canonical" href="https://www.combustionconsulting.co.uk/">
+<meta name="theme-color" content="#070907">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Combustion Consulting">
+<meta property="og:title" content="Combustion Consulting">
+<meta property="og:description" content="Product sales planning, aftersales and service strategy for industrial diesel engines. Led by Graham Dunn, in industrial power since 1975.">
+<meta property="og:url" content="https://www.combustionconsulting.co.uk/">
+<meta property="og:image" content="https://www.combustionconsulting.co.uk/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Combustion Consulting">
+<meta name="twitter:description" content="Product sales planning, aftersales and service strategy for industrial diesel engines. Led by Graham Dunn, in industrial power since 1975.">
+<meta name="twitter:image" content="https://www.combustionconsulting.co.uk/share.png">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* ============================================================
+   COMBUSTION CONSULTING
+   Tokens. Single committed dark identity, painted explicitly.
+   ============================================================ */
+:root{
+  --ink:#070907;
+  --ink-2:#0b0e0a;
+  --panel:#121611;
+  --panel-2:#181d16;
+  --lime:#E3FF64;
+  --lime-dim:#b9d24a;
+  --lime-deep:#7f9430;
+  --text:#F1F3E9;
+  --muted:#959b8d;
+  --muted-2:#6c7365;
+  --line:rgba(227,255,100,.17);
+  --line-soft:rgba(241,243,233,.09);
+  --line-hard:rgba(227,255,100,.42);
+
+  --f-display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --rail:58px;
+  --pad:clamp(20px,4vw,64px);
+  --maxw:1280px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--f-body);
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--lime);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.018em;line-height:1.07}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+hr{border:0;border-top:1px solid var(--line-soft);margin:0}
+::selection{background:var(--lime);color:#0a0c09}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--lime);color:#0a0c09;padding:10px 16px;font-family:var(--f-mono);font-size:12px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- shared bits ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.mono{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mono-lime{color:var(--lime-dim)}
+.lead{font-size:clamp(17px,1.45vw,19.5px);line-height:1.66;color:#dfe3d6}
+.dim{color:var(--muted)}
+
+/* sheet header: the drawing-sheet strip that opens each band */
+.sheet{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:clamp(28px,3.4vw,52px);flex-wrap:wrap}
+.sheet-ref{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);white-space:nowrap}
+.sheet-ttl{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sheet-rev{margin-left:auto;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+
+.band{padding:clamp(56px,7vw,110px) 0;position:relative}
+.band-alt{background:var(--ink-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+
+h2.sec{font-size:clamp(28px,3.5vw,46px);font-weight:700;max-width:22ch}
+h3.sub{font-size:clamp(19px,1.7vw,23px);font-weight:600}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;font-family:var(--f-display);font-size:15px;font-weight:600;letter-spacing:.01em;border:1px solid var(--lime);cursor:pointer;transition:background .16s ease,color .16s ease,transform .16s ease}
+.btn-solid{background:var(--lime);color:#0a0c09}
+.btn-solid:hover{background:#eeff90;text-decoration:none;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--lime)}
+.btn-ghost:hover{background:rgba(227,255,100,.1);text-decoration:none}
+.btn-arrow{font-family:var(--f-mono);font-size:13px}
+
+/* review markers, retained for future drafts */
+
+/* ---------- left scale rail ---------- */
+.railbar{position:fixed;left:0;top:0;bottom:0;width:var(--rail);border-right:1px solid var(--line-soft);background:var(--ink);z-index:60;display:none}
+.railbar::before{content:"";position:absolute;left:0;right:0;top:0;height:100%;
+  background-image:repeating-linear-gradient(to bottom,var(--line-soft) 0 1px,transparent 1px 28px);
+  background-position:0 0;opacity:.8}
+.railbar span{position:absolute;left:50%;bottom:26px;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-2)}
+.railbar em{position:absolute;left:50%;top:96px;transform:translateX(-50%);width:15px;height:1px;background:var(--lime)}
+@media(min-width:1120px){
+  .railbar{display:block}
+  body{padding-left:var(--rail)}
+}
+
+/* ---------- header ---------- */
+.util{background:#04050400;border-bottom:1px solid var(--line-soft);background-color:#050705}
+.util .wrap{display:flex;align-items:center;gap:22px;min-height:40px;flex-wrap:wrap;justify-content:flex-end}
+.util a{color:var(--muted);font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em}
+.util a:hover{color:var(--lime)}
+.util .note{margin-right:auto;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime-deep)}
+
+header.site{position:sticky;top:0;z-index:70;background:rgba(7,9,7,.92);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:24px;min-height:78px}
+.brand{display:flex;align-items:center;flex:0 0 auto}
+.brand img{width:clamp(178px,17vw,236px);height:auto}
+.brand .fallback{display:none;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--text)}
+.brand .fallback b{color:var(--lime)}
+nav.main{margin-left:auto;display:flex;align-items:center;gap:clamp(4px,1.1vw,10px)}
+nav.main a{font-family:var(--f-display);font-size:15px;font-weight:500;color:var(--text);padding:10px 12px;border-bottom:2px solid transparent}
+nav.main a:hover{color:var(--lime);text-decoration:none}
+nav.main a[aria-current="page"]{color:var(--lime);border-bottom-color:var(--lime)}
+nav.main a.navcta{margin-left:10px;color:#0a0c09;border-bottom:1px solid var(--lime)}
+nav.main a.navcta:hover{color:#0a0c09}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--text);width:46px;height:46px;cursor:pointer;font-size:18px;line-height:1}
+@media(max-width:900px){
+  nav.main{position:absolute;top:100%;left:0;right:0;background:var(--ink-2);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:8px var(--pad) 20px;gap:0;display:none}
+  nav.main.open{display:flex}
+  nav.main a{padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  nav.main a[aria-current="page"]{border-bottom-color:var(--lime)}
+  .navcta{margin:14px 0 0}
+  .burger{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.dots{position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at center,var(--lime) 1.6px,transparent 1.7px);
+  background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(26% 62% at -10% 60%,#000 0%,rgba(0,0,0,.45) 36%,transparent 70%);
+  mask-image:radial-gradient(26% 62% at -10% 60%,#000 0%,rgba(0,0,0,.45) 36%,transparent 70%);
+  opacity:.75}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.9fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:clamp(46px,6vw,80px);padding-bottom:clamp(40px,5vw,72px)}
+@media(max-width:940px){.hero .wrap{grid-template-columns:1fr;align-items:start}}
+
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.eyebrow .tick{width:34px;height:1px;background:var(--lime)}
+h1.hero-h{font-size:clamp(32px,4.4vw,57px);font-weight:800;letter-spacing:-.032em;max-width:23ch}
+h1.hero-h b{color:var(--lime);font-weight:800}
+.hero-lead{margin-top:26px;max-width:56ch}
+.hero-lead em{font-style:normal;color:var(--lime);font-weight:600}
+.hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;align-items:center}
+.hero-phone{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.hero-phone a{color:var(--text)}
+
+/* portrait plate — dimensioned like a drawing callout */
+.plate{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel) 0%,#0d100c 100%);padding:14px 14px 0}
+.plate-hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line-soft);margin-bottom:14px}
+.plate figure{margin:0;position:relative;background:#000}
+.plate img{width:100%;height:auto;filter:contrast(1.04) saturate(.96)}
+.plate .noimg{display:none;padding:52px 8px;text-align:center;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);border:1px dashed var(--line-soft)}
+.nameplate{border-top:1px solid var(--lime);padding:14px 0 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.nameplate strong{font-family:var(--f-display);font-size:19px;font-weight:700;letter-spacing:-.01em}
+.nameplate span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--lime)}
+
+/* ---------- proof strip ---------- */
+.proof{border-bottom:1px solid var(--line-soft);background:var(--ink-2)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:820px){.proof .wrap{grid-template-columns:repeat(2,1fr)}}
+.pf{padding:clamp(22px,2.6vw,36px) clamp(14px,2vw,30px);border-left:1px solid var(--line-soft)}
+.pf:first-child{border-left:0;padding-left:0}
+.pf b{display:block;font-family:var(--f-display);font-size:clamp(30px,3.6vw,48px);font-weight:700;color:var(--lime);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.pf small{display:block;margin-top:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- service cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{background:var(--ink);padding:clamp(24px,2.8vw,38px);display:flex;flex-direction:column;gap:14px;transition:background .18s ease}
+.card:hover{background:var(--panel)}
+.card .num{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--lime-deep)}
+.card h3{font-size:clamp(19px,1.8vw,24px);font-weight:600;letter-spacing:-.015em}
+.card p{color:var(--muted);font-size:15.5px}
+.card .go{margin-top:auto;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.card svg{width:44px;height:44px;stroke:var(--lime);fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- two column generic ---------- */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,4.5vw,80px);align-items:start}
+@media(max-width:880px){.split{grid-template-columns:1fr}}
+
+/* checklist */
+.checks{display:grid;gap:0}
+.checks li{display:grid;grid-template-columns:26px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line-soft);align-items:start}
+.checks li:first-child{border-top:1px solid var(--line-soft)}
+.checks svg{width:16px;height:16px;stroke:var(--lime);fill:none;stroke-width:1.8;margin-top:5px}
+
+/* audience router */
+.router{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+@media(max-width:900px){.router{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.router{grid-template-columns:1fr}}
+.rt{background:var(--ink-2);padding:clamp(20px,2.4vw,30px);display:flex;flex-direction:column;gap:10px;min-height:180px}
+.rt .k{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime-deep)}
+.rt strong{font-family:var(--f-display);font-size:17.5px;font-weight:600;line-height:1.24;letter-spacing:-.012em}
+.rt a{margin-top:auto;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+
+/* case study cards */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,22px)}
+@media(max-width:900px){.cases{grid-template-columns:1fr}}
+.case{display:flex;flex-direction:column;gap:16px}
+.case .figure{font-family:var(--f-display);font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--lime);letter-spacing:-.03em;line-height:1.04}
+.case p{font-size:15.5px;color:#d9ddcf}
+.case .who{font-family:var(--f-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+
+/* process — a real sequence, so it is numbered */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding:26px clamp(16px,2vw,28px) 30px 0;border-right:1px solid var(--line-soft);position:relative}
+.step:last-child{border-right:0}
+.step::before{content:"";position:absolute;top:-1px;left:0;width:38px;height:3px;background:var(--lime)}
+.step .n{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--lime);margin-bottom:12px;display:block}
+.step strong{display:block;font-family:var(--f-display);font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.012em}
+.step p{font-size:14.8px;color:var(--muted)}
+
+/* why list */
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+@media(max-width:760px){.why{grid-template-columns:1fr}}
+.why li{background:var(--ink);padding:clamp(22px,2.4vw,30px);display:flex;gap:16px;align-items:flex-start}
+.why li .idx{font-family:var(--f-mono);font-size:11px;color:var(--lime-deep);letter-spacing:.15em;padding-top:4px;flex:0 0 auto}
+.why li p{font-size:16px}
+
+/* CTA band */
+.ctaband{background:var(--lime);color:#0a0c09}
+.ctaband .wrap{padding-top:clamp(44px,5vw,72px);padding-bottom:clamp(44px,5vw,72px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,60px);align-items:center}
+@media(max-width:880px){.ctaband .wrap{grid-template-columns:1fr}}
+.ctaband h2{font-size:clamp(26px,3.3vw,42px);font-weight:800;letter-spacing:-.03em;max-width:24ch}
+.ctaband p{margin-top:14px;max-width:52ch;color:#22271c;font-size:17px}
+.ctaband .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.ctaband .btn{border-color:#0a0c09}
+.ctaband .btn-solid{background:#0a0c09;color:var(--lime)}
+.ctaband .btn-solid:hover{background:#1b2016}
+.ctaband .btn-ghost{color:#0a0c09}
+.ctaband .btn-ghost:hover{background:rgba(10,12,9,.09)}
+.ctaband .mono{color:#3a4131}
+.ctaband a{color:#0a0c09}
+
+/* ---------- service detail sections ---------- */
+.svc{padding:clamp(44px,5vw,72px) 0;border-bottom:1px solid var(--line-soft)}
+.svc:last-of-type{border-bottom:0}
+.svc-hd{display:flex;align-items:flex-start;gap:20px;margin-bottom:26px}
+.svc-hd svg{width:52px;height:52px;stroke:var(--lime);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.svc-hd .t .ref{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--lime-deep);display:block;margin-bottom:8px}
+.svc-hd h2{font-size:clamp(24px,2.9vw,36px);font-weight:700;max-width:26ch}
+.bullets li{display:grid;grid-template-columns:18px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);align-items:start;font-size:16px}
+.bullets li:first-child{border-top:1px solid var(--line-soft)}
+.bullets .bar{width:11px;height:1px;background:var(--lime);margin-top:12px}
+
+/* ---------- about ---------- */
+.bio{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:clamp(28px,4vw,64px);align-items:start}
+@media(max-width:880px){.bio{grid-template-columns:1fr}}
+.regions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.regions li{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text);border:1px solid var(--line);padding:7px 12px}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.85fr);gap:clamp(30px,4vw,72px);align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+form.enq{display:grid;gap:20px}
+.field{display:grid;gap:8px}
+.field label{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.field label .req{color:var(--lime)}
+.field input,.field textarea{background:var(--panel);border:1px solid var(--line-soft);color:var(--text);font-family:var(--f-body);font-size:16px;padding:13px 14px;min-height:50px;width:100%}
+.field textarea{min-height:132px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--lime);outline:none}
+.field .hint{font-size:13.5px;color:var(--muted-2)}
+.privacy{font-size:13.5px;color:var(--muted);border-left:1px solid var(--line);padding-left:16px}
+.contact-card{border:1px solid var(--line);background:var(--panel);padding:clamp(22px,2.6vw,32px)}
+.contact-card dl{margin:0;display:grid;gap:0}
+.contact-card dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);padding-top:18px;margin-top:18px;border-top:1px solid var(--line-soft)}
+.contact-card dl>div:first-child dt{border-top:0;padding-top:0;margin-top:0}
+.contact-card dd{margin:6px 0 0;font-size:17px}
+.contact-card dd.big{font-family:var(--f-display);font-size:24px;font-weight:600;letter-spacing:-.02em}
+
+/* ---------- footer ---------- */
+footer.site{border-top:1px solid var(--line);background:#050705;padding:clamp(46px,5vw,76px) 0 30px;margin-top:0}
+.f-top{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(2,minmax(0,.6fr)) minmax(0,.8fr);gap:clamp(24px,3vw,48px)}
+@media(max-width:900px){.f-top{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.f-top{grid-template-columns:1fr}}
+.f-logo img{width:min(310px,100%);height:auto;margin-bottom:20px}
+.f-logo .fallback{display:none;font-family:var(--f-display);font-weight:800;font-size:26px;letter-spacing:-.025em;margin-bottom:16px}
+.f-logo .fallback b{color:var(--lime)}
+.f-col h4{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);font-weight:500;margin-bottom:16px}
+.f-col li{padding:6px 0}
+.f-col a{color:var(--text);font-size:15px}
+.f-col a:hover{color:var(--lime)}
+.f-addr{font-size:15px;color:var(--muted);line-height:1.85}
+.f-addr strong{color:var(--text);font-weight:500;display:block;margin-bottom:6px}
+.f-legal{margin-top:clamp(34px,4vw,56px);padding-top:22px;border-top:1px solid var(--line-soft);display:flex;gap:10px 28px;flex-wrap:wrap;align-items:baseline}
+.f-legal p,.f-legal a{font-family:var(--f-mono);font-size:11px;letter-spacing:.09em;color:var(--muted-2);text-transform:none}
+.f-legal a:hover{color:var(--lime)}
+
+/* ---------- page routing ---------- */
+.page{display:none}
+.page.active{display:block}
+
+/* review banner, unused on the live build */
+
+/* ============================================================
+   LIVE SCHEMATIC — the value chain, scanned
+   One 11s cycle. Four nodes, phase shifted by a quarter each,
+   so exactly one point is active and the caption always agrees.
+   ============================================================ */
+.scope{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel) 0%,#0c0f0b 100%);position:relative}
+.scope-hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line-soft)}
+.scope-hd span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.scope-hd b{color:var(--lime);font-weight:500}
+.scope-body{position:relative;overflow:hidden;padding:26px 18px;
+  background-image:linear-gradient(to right,var(--line-soft) 0 1px,transparent 1px 100%),linear-gradient(to bottom,var(--line-soft) 0 1px,transparent 1px 100%);
+  background-size:46px 46px}
+.crop{position:absolute;width:13px;height:13px;border:1px solid var(--lime-deep)}
+.crop.tl{top:9px;left:9px;border-right:0;border-bottom:0}
+.crop.tr{top:9px;right:9px;border-left:0;border-bottom:0}
+.crop.bl{bottom:9px;left:9px;border-right:0;border-top:0}
+.crop.br{bottom:9px;right:9px;border-left:0;border-top:0}
+
+.sweep{position:absolute;left:0;right:0;top:0;height:74px;pointer-events:none;z-index:2;
+  background:linear-gradient(to bottom,transparent 0%,rgba(227,255,100,.055) 62%,rgba(227,255,100,.16) 96%,var(--lime) 100%);
+  transform:translateY(-80px)}
+
+.chain{position:relative;z-index:3;display:grid;gap:0;counter-reset:none}
+.chain::before{content:"";position:absolute;left:23px;top:26px;bottom:26px;width:1px;background:linear-gradient(to bottom,var(--lime-deep),rgba(227,255,100,.22))}
+.node{all:unset;display:grid;grid-template-columns:46px 1fr;align-items:center;gap:4px 12px;padding:11px 6px;cursor:pointer;position:relative;opacity:.44;transition:opacity .3s ease}
+.node:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.node .mk{grid-row:1/3;justify-self:center;position:relative;width:15px;height:15px}
+.node .mk i{position:absolute;inset:3px;background:var(--muted-2);border-radius:50%;display:block;transition:background .3s ease}
+.node .mk .ping{position:absolute;inset:0;border:1px solid var(--lime);border-radius:50%;opacity:0;transform:scale(.6)}
+.node .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--muted-2);grid-column:2}
+.node strong{grid-column:2;font-family:var(--f-display);font-size:15.5px;font-weight:600;letter-spacing:-.01em;line-height:1.24;color:var(--text)}
+.node.on,.scope.pinned .node.on{opacity:1}
+.node.on .mk i{background:var(--lime)}
+.node.on .k{color:var(--lime)}
+
+.scope-cap{border-top:1px solid var(--lime);padding:14px 16px 8px;min-height:124px;position:relative}
+.scope-cap .cap{position:absolute;left:16px;right:16px;top:14px;opacity:0}
+.scope-cap .cap.on{opacity:1}
+.scope-cap .cap .ck{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:7px}
+.scope-cap .cap p{font-size:14.6px;line-height:1.5;color:#d7dbcd}
+.scope-note{padding:0 16px 14px;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+
+/* travel tuned so the bright leading edge crosses each marker
+   exactly as that marker lights: 0.13, 0.38, 0.63 and 0.88 of the cycle */
+@keyframes cc-sweep{0%{transform:translateY(-49px)}100%{transform:translateY(199px)}}
+@keyframes cc-on{0%,3%{opacity:.44}7%,19%{opacity:1}23%,100%{opacity:.44}}
+@keyframes cc-dot{0%,3%{background:var(--muted-2)}7%,19%{background:var(--lime)}23%,100%{background:var(--muted-2)}}
+@keyframes cc-key{0%,3%{color:var(--muted-2)}7%,19%{color:var(--lime)}23%,100%{color:var(--muted-2)}}
+@keyframes cc-ping{0%,5%{opacity:0;transform:scale(.6)}8%{opacity:.9;transform:scale(1)}20%,100%{opacity:0;transform:scale(2.7)}}
+@keyframes cc-cap{0%,4%{opacity:0}8%,20%{opacity:1}24%,100%{opacity:0}}
+
+/* one cycle, four phases. --d is inherited by each point's children,
+   so the delay survives no matter how specific the animation rule is. */
+.scope [data-i="1"]{--d:0s}
+.scope [data-i="2"]{--d:2.75s}
+.scope [data-i="3"]{--d:5.5s}
+.scope [data-i="4"]{--d:8.25s}
+.scope.run .sweep{animation:cc-sweep 11s linear 0s infinite}
+.scope.run .node{animation:cc-on 11s linear var(--d,0s) infinite both}
+.scope.run .node .mk i{animation:cc-dot 11s linear var(--d,0s) infinite both}
+.scope.run .node .k{animation:cc-key 11s linear var(--d,0s) infinite both}
+.scope.run .node .ping{animation:cc-ping 11s linear var(--d,0s) infinite both}
+.scope.run .scope-cap .cap{animation:cc-cap 11s linear var(--d,0s) infinite both}
+.scope.pinned .sweep{opacity:.25}
+
+/* ============================================================
+   PANEL MECHANISMS — one per page, same instrument language.
+   Home: vertical scan of the route to market.
+   Services: current running round a closed commercial cycle.
+   Track record: a playhead travelling a 40 year axis.
+   About: a rotating sweep over the six regions.
+   Contact: the three enquiry routes, all landing on one person.
+   ============================================================ */
+.scope-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.6vw,40px);align-items:center}
+@media(max-width:760px){.scope-grid{grid-template-columns:1fr}}
+
+/* the travelling lime segment, shared by the cycle and the timeline */
+.flow{fill:none;stroke:var(--lime);stroke-width:2;stroke-linecap:round}
+.rail{fill:none;stroke:rgba(227,255,100,.28);stroke-width:1}
+.stn{fill:var(--panel);stroke:var(--lime-deep);stroke-width:1.2}
+.stn-lbl{font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;fill:var(--muted-2)}
+.mid-lbl{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;fill:var(--muted-2)}
+.scope-body svg{width:100%;height:auto;display:block;overflow:visible}
+.cyc svg{max-width:520px;margin:0 auto}
+.tl svg{max-width:700px;margin:0 auto}
+.tl .stn-lbl{font-size:8px;letter-spacing:.1em}
+.tl .rail,.tl .flow{stroke-width:1.3}
+
+/* cycle: 12s loop, stations at 0.149 / 0.399 / 0.649 / 0.899 of the path */
+@keyframes cc-flow{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-1206}}
+.scope.run .cyc .flow{stroke-dasharray:84 1122;animation:cc-flow 12s linear infinite}
+@keyframes cc-lit{0%{opacity:.4}4%,22%{opacity:1}25%,100%{opacity:.4}}
+@keyframes cc-lit-fill{0%{fill:var(--panel);stroke:var(--lime-deep)}4%,22%{fill:var(--lime);stroke:var(--lime)}25%,100%{fill:var(--panel);stroke:var(--lime-deep)}}
+@keyframes cc-lit-txt{0%{fill:var(--muted-2)}4%,22%{fill:var(--lime)}25%,100%{fill:var(--muted-2)}}
+@keyframes cc-lit-cap{0%{opacity:0}5%,22%{opacity:1}25%,100%{opacity:0}}
+.scope.run .cyc [data-s] .stn{animation:cc-lit-fill 12s linear var(--sd,0s) infinite both}
+.scope.run .cyc [data-s] .stn-lbl{animation:cc-lit-txt 12s linear var(--sd,0s) infinite both}
+.scope.run .cyc-cap .cap{animation:cc-lit-cap 12s linear var(--sd,0s) infinite both}
+.cyc [data-s="1"],.cyc-cap [data-s="1"]{--sd:1.6s}
+.cyc [data-s="2"],.cyc-cap [data-s="2"]{--sd:4.6s}
+.cyc [data-s="3"],.cyc-cap [data-s="3"]{--sd:7.6s}
+.cyc [data-s="4"],.cyc-cap [data-s="4"]{--sd:10.6s}
+
+/* timeline: bar width is years served, playhead dwells on each in turn */
+.tl svg{max-width:720px;margin:0 auto}
+.tl .seg-bg{fill:rgba(241,243,233,.05)}
+.tl .seg{fill:rgba(227,255,100,.17)}
+.tl .ph{fill:var(--lime)}
+.tl .rail{stroke:rgba(227,255,100,.28)}
+.tl-ax{font-family:var(--f-mono);font-size:7.4px;letter-spacing:.14em;fill:var(--muted-2)}
+@keyframes cc-seg{0%{fill:rgba(227,255,100,.17)}2%,22%{fill:var(--lime)}25%,100%{fill:rgba(227,255,100,.17)}}
+@keyframes cc-ph{0%,6%{transform:translateX(38px)}25%,31%{transform:translateX(97px)}
+  50%,56%{transform:translateX(167px)}75%,81%{transform:translateX(309px)}100%{transform:translateX(38px)}}
+.scope.run .tl .seg{animation:cc-seg 12s linear var(--sd,0s) infinite both}
+.scope.run .tl .ph{animation:cc-ph 12s ease-in-out infinite both}
+.scope.run .tl-cap .cap{animation:cc-lit-cap 12s linear var(--sd,0s) infinite both}
+.tl [data-s="1"],.tl-cap [data-s="1"]{--sd:0s}
+.tl [data-s="2"],.tl-cap [data-s="2"]{--sd:3s}
+.tl [data-s="3"],.tl-cap [data-s="3"]{--sd:6s}
+.tl [data-s="4"],.tl-cap [data-s="4"]{--sd:9s}
+
+/* radar: 18s rotation over six regions */
+.radar{position:relative;aspect-ratio:1;max-width:230px;margin:0 auto;width:100%}
+.radar .rings{position:absolute;inset:0}
+.radar .rings i{position:absolute;border:1px solid var(--line);border-radius:50%}
+.radar .rings i:nth-child(1){inset:0}
+.radar .rings i:nth-child(2){inset:16%}
+.radar .rings i:nth-child(3){inset:33%}
+.radar .rings i:nth-child(4){inset:50%;border-color:var(--line-hard)}
+.radar .cross{position:absolute;inset:0}
+.radar .cross i{position:absolute;background:var(--line)}
+.radar .cross i:nth-child(1){left:0;right:0;top:50%;height:1px}
+.radar .cross i:nth-child(2){top:0;bottom:0;left:50%;width:1px}
+.radar .beam{position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(227,255,100,.22) 0deg,rgba(227,255,100,.09) 22deg,rgba(227,255,100,.03) 46deg,transparent 72deg,transparent 360deg);
+  -webkit-mask-image:radial-gradient(circle,#000 99%,transparent 100%);mask-image:radial-gradient(circle,#000 99%,transparent 100%)}
+.radar .arm{position:absolute;left:50%;top:0;bottom:50%;width:1px;background:linear-gradient(to bottom,transparent,var(--lime));transform-origin:bottom center}
+@keyframes cc-spin{to{transform:rotate(360deg)}}
+.scope.run .radar .beam,.scope.run .radar .arm{animation:cc-spin 18s linear infinite}
+.regions-live{display:grid;gap:0}
+.regions-live li{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--line-soft);opacity:.42}
+.regions-live li:first-child{border-top:0}
+.regions-live .rd{width:8px;height:8px;border-radius:50%;background:var(--muted-2);justify-self:center}
+.regions-live strong{font-family:var(--f-display);font-size:15px;font-weight:600;letter-spacing:-.01em}
+@keyframes cc-reg{0%{opacity:.42}3%,13%{opacity:1}16%,100%{opacity:.42}}
+@keyframes cc-reg-d{0%{background:var(--muted-2)}3%,13%{background:var(--lime)}16%,100%{background:var(--muted-2)}}
+.scope.run .regions-live li{animation:cc-reg 18s linear var(--sd,0s) infinite both}
+.scope.run .regions-live .rd{animation:cc-reg-d 18s linear var(--sd,0s) infinite both}
+.regions-live li:nth-child(1){--sd:0.2s}
+.regions-live li:nth-child(2){--sd:3.2s}
+.regions-live li:nth-child(3){--sd:6.2s}
+.regions-live li:nth-child(4){--sd:9.2s}
+.regions-live li:nth-child(5){--sd:12.2s}
+.regions-live li:nth-child(6){--sd:15.2s}
+
+/* routes: three ways in, one person */
+.routes{display:grid;grid-template-columns:minmax(0,1fr) 62px 96px;align-items:center;gap:0 0}
+@media(max-width:600px){.routes{grid-template-columns:minmax(0,1fr) 40px 78px}}
+.routes .col1{display:grid;gap:0}
+.routes .r{display:grid;grid-template-columns:18px 1fr;gap:11px;align-items:center;padding:13px 0;border-top:1px solid var(--line-soft);opacity:.42}
+.routes .r:first-child{border-top:0}
+.routes .r .rd{width:8px;height:8px;border-radius:50%;background:var(--muted-2);justify-self:center}
+.routes .r strong{font-family:var(--f-display);font-size:15px;font-weight:600;letter-spacing:-.01em}
+.routes .wires{position:relative;height:132px}
+.routes .wires svg{height:100%;width:100%}
+.routes .dest{border:1px solid var(--line);background:var(--panel);padding:14px 10px;text-align:center;position:relative}
+.routes .dest span{display:block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
+.routes .dest strong{font-family:var(--f-display);font-size:15.5px;font-weight:600;letter-spacing:-.012em}
+.routes .dest .ring{position:absolute;inset:-1px;border:1px solid var(--lime);opacity:0}
+@keyframes cc-rt{0%{opacity:.42}5%,28%{opacity:1}33%,100%{opacity:.42}}
+@keyframes cc-rt-d{0%{background:var(--muted-2)}5%,28%{background:var(--lime)}33%,100%{background:var(--muted-2)}}
+@keyframes cc-wire{0%{stroke-dashoffset:150}6%,30%{stroke-dashoffset:0}34%,100%{stroke-dashoffset:150}}
+@keyframes cc-dest{0%,4%{opacity:0}8%{opacity:.9}26%,100%{opacity:0}}
+.scope.run .routes .r{animation:cc-rt 9s linear var(--sd,0s) infinite both}
+.scope.run .routes .r .rd{animation:cc-rt-d 9s linear var(--sd,0s) infinite both}
+.scope.run .routes .wire{stroke-dasharray:150;animation:cc-wire 9s linear var(--sd,0s) infinite both}
+.scope.run .routes .dest .ring{animation:cc-dest 9s linear infinite both}
+.routes .r:nth-child(1),.routes .wire[data-s="1"]{--sd:0s}
+.routes .r:nth-child(2),.routes .wire[data-s="2"]{--sd:3s}
+.routes .r:nth-child(3),.routes .wire[data-s="3"]{--sd:6s}
+.routes .wire{fill:none;stroke:var(--lime);stroke-width:1.4;stroke-linecap:round}
+.routes .wire-bg{fill:none;stroke:var(--line-soft);stroke-width:1}
+
+/* ============================================================
+   SEQUENCING HELPERS — one lit step at a time, phase shifted.
+   cc-q  quarter cycle (4 steps)   cc-t third (3)   cc-f fifth (5)
+   The *c variants are for caption text, which fades from nothing.
+   ============================================================ */
+@keyframes cc-q{0%{opacity:.34}3%,22%{opacity:1}25%,100%{opacity:.34}}
+@keyframes cc-qc{0%{opacity:0}4%,22%{opacity:1}25%,100%{opacity:0}}
+@keyframes cc-t{0%{opacity:.34}4%,29%{opacity:1}33%,100%{opacity:.34}}
+@keyframes cc-tc{0%{opacity:0}5%,29%{opacity:1}33%,100%{opacity:0}}
+@keyframes cc-f{0%{opacity:.34}2%,17%{opacity:1}20%,100%{opacity:.34}}
+@keyframes cc-fc{0%{opacity:0}3%,17%{opacity:1}20%,100%{opacity:0}}
+.seq4 .s,.seq3 .s,.seq5 .s{opacity:.34}
+.scope.run .seq4 .s{animation:cc-q 12s linear var(--sd,0s) infinite both}
+.scope.run .cap4 .cap{animation:cc-qc 12s linear var(--sd,0s) infinite both}
+.scope.run .seq3 .s{animation:cc-t 9s linear var(--sd,0s) infinite both}
+.scope.run .cap3 .cap{animation:cc-tc 9s linear var(--sd,0s) infinite both}
+.scope.run .seq5 .s{animation:cc-f 15s linear var(--sd,0s) infinite both}
+.scope.run .cap5 .cap{animation:cc-fc 15s linear var(--sd,0s) infinite both}
+[data-sq="1"]{--sd:0s}[data-sq="2"]{--sd:3s}[data-sq="3"]{--sd:6s}[data-sq="4"]{--sd:9s}[data-sq="5"]{--sd:12s}
+
+/* --- 1. engagement stepper: a progress rail that advances and holds --- */
+.stepper{display:grid;gap:22px}
+.strail{position:relative;height:3px;background:rgba(241,243,233,.08)}
+.strail .fill{position:absolute;inset:0;background:var(--lime);transform-origin:left center;transform:scaleX(.25)}
+@keyframes cc-fill4{0%,6%{transform:scaleX(.25)}25%,31%{transform:scaleX(.5)}
+  50%,56%{transform:scaleX(.75)}75%,81%{transform:scaleX(1)}97%,100%{transform:scaleX(.25)}}
+.scope.run .strail .fill{animation:cc-fill4 12s ease-in-out infinite both}
+.strail .pip{position:absolute;top:-4px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:1px solid var(--lime-deep);transform:translateX(-50%)}
+.seq4.stepgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:900px){.seq4.stepgrid{grid-template-columns:repeat(2,1fr);gap:22px 0}}
+@media(max-width:520px){.seq4.stepgrid{grid-template-columns:1fr;gap:20px}}
+.seq4.stepgrid .s{padding-right:clamp(14px,2vw,26px)}
+.seq4.stepgrid .n{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--lime);margin-bottom:9px}
+.seq4.stepgrid strong{display:block;font-family:var(--f-display);font-size:16.5px;font-weight:600;letter-spacing:-.012em;margin-bottom:7px}
+.seq4.stepgrid p{font-size:14.4px;color:#cfd4c4;line-height:1.5}
+
+/* --- 2 & 4. relay: a pulse handed along a line of nodes --- */
+.relay{display:grid;gap:18px}
+.relay .wirebox{position:relative}
+.relay svg{width:100%;height:auto;display:block;max-width:640px;margin:0 auto;overflow:visible}
+.relay .ln{fill:none;stroke:rgba(227,255,100,.26);stroke-width:1.2}
+.relay .pulse{fill:none;stroke:var(--lime);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:34 566}
+@keyframes cc-relay{0%{stroke-dashoffset:34}100%{stroke-dashoffset:-566}}
+.scope.run .relay .pulse{animation:cc-relay 9s linear infinite}
+.relay .nd{fill:var(--panel);stroke:var(--lime-deep);stroke-width:1.2}
+.relay .dead{fill:none;stroke:rgba(241,243,233,.14);stroke-width:1.2;stroke-dasharray:3 4}
+.relay .deadlbl{font-family:var(--f-mono);font-size:7.4px;letter-spacing:.14em;fill:rgba(241,243,233,.2)}
+.relay .ndlbl{font-family:var(--f-mono);font-size:7.6px;letter-spacing:.13em;fill:var(--lime)}
+.seq3.relaylbls{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(12px,2vw,26px)}
+@media(max-width:640px){.seq3.relaylbls{grid-template-columns:1fr;gap:16px}}
+.seq3.relaylbls .s .n{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;color:var(--lime);margin-bottom:8px}
+.seq3.relaylbls .s strong{display:block;font-family:var(--f-display);font-size:16px;font-weight:600;letter-spacing:-.012em;margin-bottom:6px}
+.seq3.relaylbls .s p{font-size:14.2px;color:#cfd4c4;line-height:1.5}
+
+/* --- 3. brand plates: a selector sliding across five plates --- */
+.plates{position:relative}
+.plates .sel{position:absolute;top:0;bottom:0;left:0;width:20%;background:rgba(227,255,100,.10);border-left:1px solid var(--lime);border-right:1px solid rgba(227,255,100,.28)}
+@keyframes cc-slide5{0%,17%{transform:translateX(0%)}20%,37%{transform:translateX(100%)}
+  40%,57%{transform:translateX(200%)}60%,77%{transform:translateX(300%)}80%,97%{transform:translateX(400%)}100%{transform:translateX(0%)}}
+.scope.run .plates .sel{animation:cc-slide5 15s ease-in-out infinite both}
+.seq5.plategrid{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.seq5.plategrid .s{padding:16px clamp(8px,1.2vw,16px);border-left:1px solid var(--line-soft);min-height:104px;display:flex;flex-direction:column;gap:7px}
+.seq5.plategrid .s:first-child{border-left:0}
+.seq5.plategrid .s b{font-family:var(--f-display);font-size:15px;font-weight:700;letter-spacing:-.014em;line-height:1.2}
+.seq5.plategrid .s span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.seq5.plategrid .s em{font-style:normal;font-size:13px;color:#cfd4c4;line-height:1.4;margin-top:auto}
+@media(max-width:820px){
+  .plates .sel{width:100%;height:20%;top:0;bottom:auto;border:0;border-top:1px solid var(--lime);border-bottom:1px solid rgba(227,255,100,.28)}
+  @keyframes cc-slide5{0%,17%{transform:translateY(0%)}20%,37%{transform:translateY(100%)}
+    40%,57%{transform:translateY(200%)}60%,77%{transform:translateY(300%)}80%,97%{transform:translateY(400%)}100%{transform:translateY(0%)}}
+  .seq5.plategrid{grid-template-columns:1fr}
+  .seq5.plategrid .s{border-left:0;border-top:1px solid var(--line-soft);min-height:0}
+  .seq5.plategrid .s:first-child{border-top:0}
+}
+
+/* --- 5. response dial: an arc closing over one working day --- */
+.dial{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:clamp(18px,2.4vw,32px);align-items:center}
+@media(max-width:560px){.dial{grid-template-columns:1fr;justify-items:center;gap:22px}}
+.dial .face{position:relative;width:100%;max-width:150px;aspect-ratio:1}
+.dial svg{width:100%;height:auto;display:block;overflow:visible}
+.dial .arcbg{fill:none;stroke:rgba(241,243,233,.09);stroke-width:6}
+.dial .arc{fill:none;stroke:var(--lime);stroke-width:6;stroke-linecap:round;stroke-dasharray:283;stroke-dashoffset:283;transform:rotate(-90deg);transform-origin:60px 60px}
+@keyframes cc-arc{0%{stroke-dashoffset:283}12%{stroke-dashoffset:189}45%{stroke-dashoffset:94}
+  78%,94%{stroke-dashoffset:0}97%,100%{stroke-dashoffset:283}}
+.scope.run .dial .arc{animation:cc-arc 9s ease-in-out infinite both}
+.dial .ctr{font-family:var(--f-display);font-size:15px;font-weight:700;fill:var(--text);letter-spacing:-.02em}
+.dial .ctr2{font-family:var(--f-mono);font-size:7px;letter-spacing:.16em;fill:var(--muted)}
+.seq3.dialsteps{display:grid;gap:0}
+.seq3.dialsteps .s{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line-soft)}
+.seq3.dialsteps .s:first-child{border-top:0}
+.seq3.dialsteps .s i{width:8px;height:8px;border-radius:50%;background:var(--lime);justify-self:center}
+.seq3.dialsteps .s strong{font-family:var(--f-display);font-size:15px;font-weight:600;letter-spacing:-.01em;display:block}
+.seq3.dialsteps .s span{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-top:3px}
+
+/* ---------- WhatsApp routes ---------- */
+.btn svg,.wa-float svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.wa-card{border:1px solid var(--line);background:rgba(227,255,100,.045);padding:clamp(18px,2vw,24px);margin-top:26px}
+.wa-card h3{font-family:var(--f-display);font-size:16.5px;font-weight:600;letter-spacing:-.012em;margin-bottom:8px}
+.wa-card p{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+.wa-float{position:fixed;right:clamp(16px,2.4vw,30px);bottom:clamp(16px,2.4vw,30px);z-index:90;
+  display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 20px;
+  background:var(--lime);color:#0a0c09;border:1px solid var(--lime);
+  font-family:var(--f-display);font-size:14.5px;font-weight:600;letter-spacing:.005em;
+  box-shadow:0 8px 26px rgba(0,0,0,.55);transition:transform .18s ease,background .18s ease}
+.wa-float:hover{background:#eeff90;text-decoration:none;transform:translateY(-2px)}
+.wa-float svg{width:20px;height:20px;stroke-width:1.6}
+@media(max-width:560px){.wa-float{height:50px;padding:0 16px;font-size:0;gap:0}.wa-float svg{width:22px;height:22px}}
+
+/* ---------- career summary, About page ---------- */
+.career{display:grid;gap:0;margin-top:22px;border-top:1px solid var(--line-soft)}
+.career li{display:grid;grid-template-columns:150px minmax(0,1.1fr) minmax(0,1fr);gap:4px 22px;padding:15px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+@media(max-width:700px){.career li{grid-template-columns:1fr;gap:4px;padding:14px 0}}
+.career .cy{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--lime-dim);font-variant-numeric:tabular-nums;white-space:nowrap}
+.career .ct{font-family:var(--f-display);font-size:16.5px;font-weight:600;letter-spacing:-.012em;color:var(--text)}
+.career .ce{font-size:15px;color:var(--muted)}
+.career li.now .cy{color:var(--lime)}
+
+/* ---------- track record: roles, metrics, founding offer ---------- */
+.roles{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.role{background:var(--ink);padding:clamp(20px,2.4vw,30px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:8px clamp(20px,3vw,44px)}
+@media(max-width:820px){.role{grid-template-columns:1fr}}
+.role .rk{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime-deep);margin-bottom:9px;display:block}
+.role h3{font-family:var(--f-display);font-size:19px;font-weight:600;letter-spacing:-.014em;line-height:1.25}
+.role .yrs{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--muted);margin-top:8px;display:block}
+.role .body p{font-size:15.6px;color:#d7dbcd}
+.role .body p+p{margin-top:10px}
+.role .body .moved{border-left:2px solid var(--lime);padding-left:15px;color:var(--text)}
+
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+@media(max-width:1000px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.metrics{grid-template-columns:1fr}}
+.mg{background:var(--ink-2);padding:clamp(20px,2.2vw,28px);display:flex;flex-direction:column;gap:16px}
+.mg .mk{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.mg h3{font-family:var(--f-display);font-size:16.5px;font-weight:600;line-height:1.28;letter-spacing:-.012em}
+.mg ul{display:grid;gap:0;margin-top:2px}
+.mg li{font-size:14.6px;color:#cfd4c4;padding:9px 0;border-top:1px solid var(--line-soft);line-height:1.45}
+.mg li:first-child{border-top:0;padding-top:0}
+
+.offer{border:1px solid var(--lime);background:linear-gradient(180deg,rgba(227,255,100,.055),transparent 65%)}
+.offer-in{padding:clamp(26px,3.2vw,44px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,3.5vw,56px);align-items:start}
+@media(max-width:880px){.offer-in{grid-template-columns:1fr}}
+.offer h2{font-size:clamp(24px,2.8vw,36px);font-weight:700}
+.terms{display:grid;gap:0;margin-top:6px}
+.terms div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:6px 18px;padding:13px 0;border-top:1px solid var(--line-soft)}
+.terms div:first-child{border-top:0;padding-top:0}
+@media(max-width:520px){.terms div{grid-template-columns:1fr}}
+.terms dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.terms dd{margin:0;font-size:15.6px}
+
+/* counters, gentle scroll rise, card hover rule */
+.rise-init{opacity:0;transform:translateY(16px)}
+.rise-go{opacity:1;transform:none;transition:opacity .62s ease,transform .62s cubic-bezier(.22,.68,.28,1)}
+.card{position:relative}
+.card::after{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--lime);transition:width .38s cubic-bezier(.22,.68,.28,1)}
+.card:hover::after,.card:focus-visible::after{width:100%}
+.card .go{transition:transform .28s ease}
+.card:hover .go{transform:translateX(5px)}
+.rt{position:relative}
+.rt::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--lime);transition:width .38s cubic-bezier(.22,.68,.28,1)}
+.rt:hover::after{width:100%}
+
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .node{opacity:1}
+  .node .mk i{background:var(--lime)}
+  .node .k{color:var(--lime)}
+  .sweep{display:none}
+  .scope-cap{min-height:0}
+  .scope-cap .cap{position:static;opacity:1;margin-bottom:14px}
+  .scope-cap .cap:last-child{margin-bottom:0}
+  .rise-init{opacity:1;transform:none}
+  .flow,.radar .beam,.radar .arm,.routes .wire,.routes .dest .ring{display:none}
+  .cyc .stn{fill:var(--lime);stroke:var(--lime)}
+  .cyc .stn-lbl{fill:var(--lime)}
+  .tl .seg{fill:var(--lime)}
+  .tl .ph{display:none}
+  .cyc-cap .cap,.tl-cap .cap{position:static;opacity:1;margin-bottom:12px}
+  .regions-live li,.routes .r{opacity:1}
+  .seq4 .s,.seq3 .s,.seq5 .s{opacity:1}
+  .relay .pulse,.plates .sel,.strail .fill{display:none}
+  .dial .arc{stroke-dashoffset:0}
+  .cap4 .cap,.cap3 .cap,.cap5 .cap{position:static;opacity:1;margin-bottom:12px}
+  .regions-live .rd,.routes .r .rd{background:var(--lime)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="railbar" aria-hidden="true"><em></em><span>Combustion Consulting &nbsp;·&nbsp; Sheet 1 of 5</span></div>
+
+
+
+<div class="util"><div class="wrap">
+  <span class="note">Sales &nbsp;·&nbsp; Aftersales &nbsp;·&nbsp; Service strategy</span>
+  <a href="mailto:contact@combustionconsulting.co.uk">contact@combustionconsulting.co.uk</a>
+  <a href="tel:+447368114011">+44 (0)7368 114011</a>
+</div></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Combustion Consulting, home">
+      <img src="/logo.webp" alt="Combustion Consulting, sales and strategy planning" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="fallback">com<b>b</b>ustion<br>CONSULTING</span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+    <nav class="main" id="nav">
+      <a href="#home">Home</a>
+      <a href="#services">Our Services</a>
+      <a href="#track">Track record</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid navcta" href="#contact">Speak to Graham</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================== HOME ============================== -->
+<section class="page active" id="page-home" aria-label="Home">
+
+  <div class="hero">
+    <div class="dots"></div>
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">
+          <span class="tick"></span>
+          <span class="mono">Industrial engineering &amp; OEM product sectors</span>
+        </div>
+        <h1 class="hero-h">Focusing on Product Sales Planning, <b>Aftersales</b> and Service Strategy</h1>
+        <p class="lead hero-lead">Combustion Consulting is led by seasoned Sales, Aftersales and Service professionals with more than <em>40 years' experience</em> across the industrial engineering and OEM product sectors.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#contact">Speak to Graham <span class="btn-arrow">&rarr;</span></a>
+          <a class="btn btn-ghost" href="#services">The four service areas</a>
+        </div>
+        <p class="hero-phone" style="margin-top:22px">Or call direct &nbsp;·&nbsp; <a href="tel:+447368114011">+44 (0)7368 114011</a></p>
+      </div>
+
+      <!-- live schematic: the route a product takes to market, and where Graham works on it -->
+      <div class="scope run" id="scope">
+        <div class="scope-hd"><span>Route to market &nbsp;·&nbsp; <b>Rev A</b></span><span>4 service points</span></div>
+        <div class="scope-body">
+          <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+          <div class="sweep" aria-hidden="true"></div>
+          <div class="chain">
+            <button class="node" data-i="1" type="button" aria-label="Point 01, manufacturer or OEM">
+              <span class="mk" aria-hidden="true"><span class="ping"></span><i></i></span>
+              <span class="k">Point 01</span><strong>Manufacturer / OEM</strong>
+            </button>
+            <button class="node" data-i="2" type="button" aria-label="Point 02, distributor and dealer network">
+              <span class="mk" aria-hidden="true"><span class="ping"></span><i></i></span>
+              <span class="k">Point 02</span><strong>Distributor &amp; dealer network</strong>
+            </button>
+            <button class="node" data-i="3" type="button" aria-label="Point 03, service centre and field engineers">
+              <span class="mk" aria-hidden="true"><span class="ping"></span><i></i></span>
+              <span class="k">Point 03</span><strong>Service centre &amp; field engineers</strong>
+            </button>
+            <button class="node" data-i="4" type="button" aria-label="Point 04, installed base and end user">
+              <span class="mk" aria-hidden="true"><span class="ping"></span><i></i></span>
+              <span class="k">Point 04</span><strong>Installed base &amp; end user</strong>
+            </button>
+          </div>
+        </div>
+        <div class="scope-cap" aria-live="off">
+          <div class="cap" data-i="1"><span class="ck">Sales Strategy &amp; Business Development</span><p>Sales plans, forecasts, pricing frameworks and KPIs, tailored to industrial, construction and marine markets.</p></div>
+          <div class="cap" data-i="2"><span class="ck">Distributor &amp; Dealer Network Development</span><p>Recruitment and onboarding, performance assessment, development plans and network expansion strategy.</p></div>
+          <div class="cap" data-i="3"><span class="ck">Service Centre Improvement &amp; Operational Excellence</span><p>Process analysis and restructuring, engineer deployment and recruitment, multi-site service planning.</p></div>
+          <div class="cap" data-i="4"><span class="ck">Aftersales Growth &amp; Parts Revenue Optimisation</span><p>Parts revenue, service plan design, margin improvement and warranty process, worked as a profit line in its own right.</p></div>
+        </div>
+        <p class="scope-note">Click a point to hold it</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- proof strip: every figure here comes from wording already on the site -->
+  <div class="proof"><div class="wrap">
+    <div class="pf"><b>1975</b><small>In industrial power since</small></div>
+    <div class="pf"><b data-count="6">6</b><small>Regions led, UK to Africa</small></div>
+    <div class="pf"><b data-count="4">4</b><small>Core service areas</small></div>
+    <div class="pf"><b data-count="5" data-suffix="&nbsp;yr">5&nbsp;yr</b><small>Technical apprenticeship, engineering qualified</small></div>
+  </div></div>
+
+  <!-- the person, and the track record, together -->
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 01</span><span class="sheet-ttl">Who you deal with</span><span class="sheet-rev">Graham Dunn, Industry Consultant</span></div>
+    <div class="bio" data-rise>
+      <div class="plate">
+        <div class="plate-hd">
+          <span class="mono mono-lime">Fig. 1</span>
+          <span class="mono">Ludgershall, Andover</span>
+        </div>
+        <figure>
+          <img src="/graham-dunn.webp" width="346" height="359" alt="Graham Dunn, Industry Consultant at Combustion Consulting" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="noimg">Portrait &nbsp;·&nbsp; Graham Dunn</div>
+        </figure>
+        <div class="nameplate">
+          <strong>Graham Dunn</strong>
+          <span>Industry Consultant</span>
+        </div>
+      </div>
+      <div>
+        <h2 class="sec">Why Combustion Consulting?</h2>
+        <p class="lead" style="margin:18px 0 14px;max-width:60ch">He has run the manufacturer&rsquo;s parts division and its service centre, and then spent 23 years buying and selling from the other side of the same table. Both halves of the engine trade, from the inside.</p>
+        <p class="lead dim" style="margin:0 0 30px;max-width:58ch">Every enquiry reaches Graham himself. No account manager, no research team, no handover.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Successful leadership of sales, service and parts teams across the UK, Europe, North America, Scandinavia, the Middle East and Africa</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Strong ability to build trust with OEMs, distributors and engineering teams</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Demonstrated history of increasing market share, revenue and service profitability</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Unique blend of commercial, and operational experience</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Engineering-qualified, with a five-year technical apprenticeship and industry associated awards</span></li>
+        </ul>
+        <p style="margin-top:30px"><a class="btn btn-ghost" href="#about">More about Graham</a></p>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- what we do -->
+  <div class="band band-alt"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 02</span><span class="sheet-ttl">What we do</span><span class="sheet-rev">Four core services</span></div>
+    <div class="split">
+      <div>
+        <h2 class="sec">Our Core Services</h2>
+        <p class="lead" style="margin-top:20px">Our expertise supports manufacturers &amp; suppliers, OEMs, distributors and service providers looking to enhance profitability and customer satisfaction.</p>
+        <p class="lead dim" style="margin-top:16px">We help organisations strengthen commercial performance, refine service operations and improve dealer network effectiveness.</p>
+        <p style="margin-top:28px"><a class="btn btn-ghost" href="#services">Read the full service detail</a></p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#services">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M5 37h34M5 37V7"/><path d="M11 30l7-9 6 5 9-14"/><circle cx="33" cy="12" r="2.6"/><path d="M24 26l-6-5-7 9" opacity=".45"/></svg>
+          <span class="num">01</span>
+          <h3>Sales Strategy &amp; Business Development</h3>
+          <p>Sales plans, forecasts and pricing frameworks built for industrial, construction and associated markets.</p>
+          <span class="go">Detail &rarr;</span>
+        </a>
+        <a class="card" href="#services">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 5l14 8v18l-14 8-14-8V13z"/><path d="M22 5v13m0 0l14-5m-14 5L8 13"/><circle cx="22" cy="24" r="4.5"/></svg>
+          <span class="num">02</span>
+          <h3>Aftersales Growth &amp; Parts Revenue Optimisation</h3>
+          <p>Parts and service revenue, margin, service plans and warranty process, treated as a profit line in its own right.</p>
+          <span class="go">Detail &rarr;</span>
+        </a>
+        <a class="card" href="#services">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 38V17l10-7 10 7v21"/><path d="M26 38V23h12v15z"/><path d="M12 38v-8h8v8"/><path d="M31 30h2m-2 4h2"/></svg>
+          <span class="num">03</span>
+          <h3>Service Centre Improvement &amp; Operational Excellence</h3>
+          <p>Process, engineer deployment, technical support and multi-site planning, from someone who has run them.</p>
+          <span class="go">Detail &rarr;</span>
+        </a>
+        <a class="card" href="#services">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="10" r="4"/><circle cx="9" cy="33" r="4"/><circle cx="35" cy="33" r="4"/><path d="M22 14v9m0 0l-11 7m11-7l11 7"/><path d="M13 33h18" opacity=".4"/></svg>
+          <span class="num">04</span>
+          <h3>Distributor &amp; Dealer Network Development</h3>
+          <p>Recruitment, onboarding, development plans and expansion strategy for UK and international networks.</p>
+          <span class="go">Detail &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- audience router -->
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 03</span><span class="sheet-ttl">Who this is for</span><span class="sheet-rev">Target customer base</span></div>
+    <h2 class="sec" style="margin-bottom:34px">Combustion Consulting Target Customer Base</h2>
+    <ul class="router">
+      <li class="rt"><span class="k">A</span><strong>OEM's requiring product sales development</strong><a href="#services">Sales strategy &rarr;</a></li>
+      <li class="rt"><span class="k">B</span><strong>Distributors aiming to enhance performance</strong><a href="#services">Network development &rarr;</a></li>
+      <li class="rt"><span class="k">C</span><strong>Service centres needing operational restructuring</strong><a href="#services">Service centre work &rarr;</a></li>
+      <li class="rt"><span class="k">D</span><strong>Organisations launching new products, or service programmes</strong><a href="#contact">Talk it through &rarr;</a></li>
+    </ul>
+  </div></div>
+
+  <!-- evidence, honestly framed for a launch -->
+  <div class="band band-alt"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 04</span><span class="sheet-ttl">Evidence</span><span class="sheet-rev">Established 2026</span></div>
+    <div class="split">
+      <div>
+        <h2 class="sec">New as a consultancy.<br>Not a new consultant.</h2>
+        <p class="lead" style="margin-top:20px">Combustion Consulting is taking on its first engagements. Graham has been doing this work for more than 40 years, and rather than pad this page out, we have set out exactly where that experience was built and exactly which numbers each service area moves.</p>
+        <p class="lead dim" style="margin-top:16px">So rather than pad this page out, we would rather show you the method now, and the results as they come.</p>
+        <p style="margin-top:28px"><a class="btn btn-ghost" href="#track">See the track record</a></p>
+      </div>
+      <div class="cards" style="grid-template-columns:1fr">
+        <a class="card" href="#track">
+          <span class="num">01</span>
+          <h3>Fifty years, four employers</h3>
+          <p>Petter Diesels, Lister-Petter, Deutz UK and E P Barrus, from a five year apprenticeship to running a service centre and a parts division.</p>
+          <span class="go">Track record &rarr;</span>
+        </a>
+        <a class="card" href="#track">
+          <span class="num">02</span>
+          <h3>The numbers we work on</h3>
+          <p>Twenty seven measures across the four service areas, from installed engine population to absorption rate. If you already track them we start there.</p>
+          <span class="go">The method &rarr;</span>
+        </a>
+        <a class="card" href="#track">
+          <span class="num">03</span>
+          <h3>The two day review</h3>
+          <p>Two days on site and a written report you can act on. The first few run at a reduced rate in return for permission to publish the result.</p>
+          <span class="go">What you get &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- representation -->
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 05</span><span class="sheet-ttl">UK representation</span><span class="sheet-rev">Open to new partnerships</span></div>
+    <div class="split">
+      <div>
+        <h2 class="sec">Your local point of contact in the UK</h2>
+        <p class="lead" style="margin-top:20px">We actively welcome new partnerships. If you're expanding your product range in the UK, or you're a manufacturer not yet represented here, we can act as your local point of contact - managing relationships and ensuring your products are effectively represented.</p>
+        <p class="lead dim" style="margin-top:16px">We also offer guidance and support for, and are eager to undertake industry associated project work.</p>
+        <p style="margin-top:28px"><a class="btn btn-ghost" href="#contact">Discuss representation</a></p>
+      </div>
+      <div>
+        <p class="mono" style="margin-bottom:18px">Regions led</p>
+        <ul class="regions" style="margin-top:0">
+          <li>United Kingdom</li><li>Europe</li><li>North America</li><li>Scandinavia</li><li>Middle East</li><li>Africa</li>
+        </ul>
+        <p class="mono" style="margin:34px 0 18px">Markets served</p>
+        <ul class="regions" style="margin-top:0">
+          <li>Industrial</li><li>Construction</li><li>Marine</li><li>Associated markets</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- process -->
+  <div class="band band-alt"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 06</span><span class="sheet-ttl">How an engagement runs</span><span class="sheet-rev">Four stages</span></div>
+    <h2 class="sec" style="margin-bottom:14px">How working together actually works</h2>
+    <p class="lead dim" style="max-width:62ch;margin-bottom:40px">So that you know what you are agreeing to before you agree to it.</p>
+    <div class="scope run">
+      <div class="scope-hd"><span>Engagement sequence &nbsp;·&nbsp; <b>Rev A</b></span><span>4 stages</span></div>
+      <div class="scope-body">
+        <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+        <div class="stepper">
+          <div class="strail">
+            <span class="fill"></span>
+            <span class="pip" style="left:25%"></span><span class="pip" style="left:50%"></span>
+            <span class="pip" style="left:75%"></span><span class="pip" style="left:100%"></span>
+          </div>
+          <div class="seq4 stepgrid">
+            <div class="s" data-sq="1"><span class="n">Stage 01</span><strong>A 30 minute call</strong><p>No charge. By the end of it he will name the two or three places he thinks the parts and service margin is leaking, or tell you plainly that he is not the right person.</p></div>
+            <div class="s" data-sq="2"><span class="n">Stage 02</span><strong>Diagnostic</strong><p>A focused review of the sales, aftersales or service position, working from your own numbers, with findings written up.</p></div>
+            <div class="s" data-sq="3"><span class="n">Stage 03</span><strong>Plan</strong><p>Objectives, KPIs and a timeline, sized to what the business can absorb rather than to a template.</p></div>
+            <div class="s" data-sq="4"><span class="n">Stage 04</span><strong>Support through delivery</strong><p>Hands-on support while the plan is put in place, including training, distributor visits and performance reviews.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="scope-note">Stage 01 costs nothing, commits you to nothing, and lasts 30 minutes</p>
+    </div>
+  </div></div>
+
+  <div class="ctaband"><div class="wrap">
+    <div>
+      <h2>Tell Graham what is not working, and he will tell you whether he can help</h2>
+      <p>Enquiries go straight to Graham, not to an account manager. If it is not something he can help with, he will say so on the first call.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-solid" href="#contact">Send an enquiry &nbsp;&rarr;</a>
+      <a class="btn btn-ghost" href="tel:+447368114011">Call +44 (0)7368 114011</a>
+      <a class="btn btn-ghost" href="https://wa.me/447368114011?text=Hello%20Graham%2C%20I%20found%20Combustion%20Consulting%20online%20and%20would%20like%20to%20talk%20about%20" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5c0 4.14-4.03 7.5-9 7.5a10 10 0 0 1-2.6-.34L4 21l1.2-3.5A7.02 7.02 0 0 1 3 11.5C3 7.36 7.03 4 12 4s9 3.36 9 7.5z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg> Or message on WhatsApp</a>
+      <p class="mono" style="margin-top:6px">Mon to Fri &nbsp;·&nbsp; <span style="text-transform:none;letter-spacing:.02em">Graham replies within one working day</span></p>
+    </div>
+  </div></div>
+
+</section>
+
+<!-- ============================== SERVICES ============================== -->
+<section class="page" id="page-services" aria-label="Our Services">
+  <div class="band" style="padding-bottom:0"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 02</span><span class="sheet-ttl">Our Services</span><span class="sheet-rev">Four core areas</span></div>
+    <h1 class="sec" style="font-size:clamp(32px,4.4vw,56px);font-weight:800">Our Services</h1>
+    <p class="lead" style="margin-top:22px;max-width:64ch">Our expertise supports manufacturers &amp; suppliers, OEMs, distributors and service providers looking to enhance profitability and customer satisfaction. We help organisations strengthen commercial performance, refine service operations and improve dealer network effectiveness.</p>
+
+      <div class="scope run" style="margin-top:clamp(28px,3vw,44px)">
+        <div class="scope-hd"><span>Commercial cycle &nbsp;·&nbsp; <b>Rev A</b></span><span>4 service areas</span></div>
+        <div class="scope-body">
+          <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+          <div class="scope-grid">
+            <div class="cyc">
+              <svg viewBox="-30 10 540 280" role="img" aria-label="The four service areas as a closed commercial cycle">
+                <path class="rail" d="M 60 40 H 420 A 20 20 0 0 1 440 60 V 240 A 20 20 0 0 1 420 260 H 60 A 20 20 0 0 1 40 240 V 60 A 20 20 0 0 1 60 40 Z"/>
+                <path class="flow" d="M 60 40 H 420 A 20 20 0 0 1 440 60 V 240 A 20 20 0 0 1 420 260 H 60 A 20 20 0 0 1 40 240 V 60 A 20 20 0 0 1 60 40 Z"/>
+                <g data-s="1"><circle class="stn" cx="240" cy="40" r="7"/><text class="stn-lbl" x="240" y="22" text-anchor="middle">SALES</text></g>
+                <g data-s="2"><circle class="stn" cx="440" cy="150" r="7"/><text class="stn-lbl" x="456" y="154" text-anchor="start">NETWORK</text></g>
+                <g data-s="3"><circle class="stn" cx="240" cy="260" r="7"/><text class="stn-lbl" x="240" y="282" text-anchor="middle">SERVICE</text></g>
+                <g data-s="4"><circle class="stn" cx="40" cy="150" r="7"/><text class="stn-lbl" x="24" y="154" text-anchor="end">PARTS</text></g>
+                <text class="mid-lbl" x="240" y="144" text-anchor="middle">ORDER TO</text>
+                <text class="mid-lbl" x="240" y="164" text-anchor="middle">INSTALLED BASE</text>
+                <text class="mid-lbl" x="240" y="190" text-anchor="middle" style="letter-spacing:.1em">AND BACK AGAIN</text>
+              </svg>
+            </div>
+            <div class="scope-cap cyc-cap" style="border-top:0;min-height:150px;padding:0">
+              <div class="cap" data-s="1"><span class="ck">01 &nbsp;Sales Strategy &amp; Business Development</span><p>Winning the order. Sales plans, forecasts, pricing frameworks and the KPIs that show whether any of it is working.</p></div>
+              <div class="cap" data-s="2"><span class="ck">02 &nbsp;Distributor &amp; Dealer Network Development</span><p>Getting product to market through people you do not employ. Recruitment, onboarding, development plans, expansion.</p></div>
+              <div class="cap" data-s="3"><span class="ck">03 &nbsp;Service Centre Improvement &amp; Operational Excellence</span><p>Keeping the installed base running. Process, engineer deployment, technical support, multi-site planning.</p></div>
+              <div class="cap" data-s="4"><span class="ck">04 &nbsp;Aftersales Growth &amp; Parts Revenue Optimisation</span><p>The revenue the installed base returns, which funds the next order and closes the loop.</p></div>
+            </div>
+          </div>
+        </div>
+        <p class="scope-note">Each area feeds the next. A weak link anywhere shows up as lost margin somewhere else</p>
+      </div>
+  </div></div>
+
+  <div class="wrap">
+    <section class="svc">
+      <div class="svc-hd">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 44h40M6 44V8"/><path d="M13 36l8-11 7 6 11-17"/><circle cx="39" cy="14" r="3"/></svg>
+        <div class="t"><span class="ref">01</span><h2>Sales Strategy &amp; Business Development</h2></div>
+      </div>
+      <div class="split">
+        <p class="lead">Drawing on decades of success selling across the UK, Europe, North America, the Middle East and Africa, we aim to help clients:</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Develop robust sales strategies tailored to industrial, construction and associated markets.</span></li>
+          <li><span class="bar"></span><span>Build accurate sales plans, forecasts, and pricing frameworks</span></li>
+          <li><span class="bar"></span><span>Create KPI's, objectives, and performance monitoring</span></li>
+          <li><span class="bar"></span><span>Strengthen commercial negotiation position with OEMs and distributors</span></li>
+          <li><span class="bar"></span><span>Improve distributor performance and motivation</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="svc">
+      <div class="svc-hd">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 6l16 9v22l-16 9-16-9V15z"/><path d="M26 6v15m0 0l16-6m-16 6L10 15"/><circle cx="26" cy="29" r="5.5"/></svg>
+        <div class="t"><span class="ref">02</span><h2>Aftersales Growth &amp; Parts Revenue Optimisation</h2></div>
+      </div>
+      <div class="split">
+        <p class="lead">With an extensive background in parts and service product sales, we provide consultancy in:</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Aftersales strategy development</span></li>
+          <li><span class="bar"></span><span>Increasing parts sales and product revenue</span></li>
+          <li><span class="bar"></span><span>Service plan design and upselling</span></li>
+          <li><span class="bar"></span><span>Margin improvement and budgeting</span></li>
+          <li><span class="bar"></span><span>Warranty process review and improvement</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="svc">
+      <div class="svc-hd">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M7 45V20l12-8 12 8v25"/><path d="M31 45V27h14v18z"/><path d="M14 45v-9h9v9"/><path d="M37 34h3m-3 5h3"/></svg>
+        <div class="t"><span class="ref">03</span><h2>Service Centre Operational Improvement &amp; Development</h2></div>
+      </div>
+      <div class="split">
+        <p class="lead">Having managed large service centres and field service teams, Combustion Consulting can help develop and support:</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Service centre process analysis and restructuring</span></li>
+          <li><span class="bar"></span><span>Deployment, organisation, and recruitment of engineers</span></li>
+          <li><span class="bar"></span><span>Technical support strategy</span></li>
+          <li><span class="bar"></span><span>Maximise profit</span></li>
+          <li><span class="bar"></span><span>Multi-site service operations planning</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="svc">
+      <div class="svc-hd">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="11" r="5"/><circle cx="11" cy="39" r="5"/><circle cx="41" cy="39" r="5"/><path d="M26 16v11m0 0L13 35m13-8l13 8"/></svg>
+        <div class="t"><span class="ref">04</span><h2>Distributor &amp; Dealer Network Development</h2></div>
+      </div>
+      <div class="split">
+        <p class="lead">Experience in training, supporting and motivating distributors worldwide allow us to offer:</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Distributor recruitment and onboarding</span></li>
+          <li><span class="bar"></span><span>Performance assessment and development plans</span></li>
+          <li><span class="bar"></span><span>Guidance on Technical and commercial training programmes</span></li>
+          <li><span class="bar"></span><span>Network expansion strategy</span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="band band-alt"><div class="wrap">
+    <div class="split">
+      <div>
+        <h2 class="sec">Project work and UK representation</h2>
+        <p class="lead" style="margin-top:20px">We actively welcome new partnerships. If you're expanding your product range in the UK, or you're a manufacturer not yet represented here, we can act as your local point of contact - managing relationships and ensuring your products are effectively represented.</p>
+        <p class="lead dim" style="margin-top:16px">We also offer guidance and support for, and are eager to undertake industry associated project work.</p>
+      </div>
+      <div>
+        <h3 class="sub" style="margin-bottom:8px">What we do not take on</h3>
+        <p class="dim" style="font-size:15px;margin-bottom:18px">Being clear about the edges of the work saves everyone a wasted call.</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Equipment design, combustion engineering calculations and commissioning. We are commercially and operationally focused, and will happily work alongside your own engineering function or an equipment specialist.</span></li>
+          <li><span class="bar"></span><span>Recruitment as an agency. We advise on structure, roles and selection, and we do not place candidates or take placement fees.</span></li>
+          <li><span class="bar"></span><span>Marketing, branding, websites and lead generation campaigns.</span></li>
+          <li><span class="bar"></span><span>ERP, CRM and parts system implementation. We will specify what the reporting needs to tell you, and leave the build to your systems provider.</span></li>
+          <li><span class="bar"></span><span>Regulatory, health and safety, or financial compliance work.</span></li>
+          <li><span class="bar"></span><span>Engagements with no access to the underlying numbers. Without the sales, parts and service data there is no way to know whether anything improved, and reporting on that is the point.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scope run" style="margin-top:clamp(26px,3vw,42px)">
+      <div class="scope-hd"><span>UK representation &nbsp;·&nbsp; <b>Rev A</b></span><span>3 stage relay</span></div>
+      <div class="scope-body">
+        <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+        <div class="relay">
+          <div class="wirebox">
+            <svg viewBox="0 0 600 76" role="img" aria-label="A manufacturer outside the UK reaching UK customers through Combustion Consulting">
+              <path class="ln" d="M60 44 H300 M300 44 H540"/>
+              <path class="pulse" d="M60 44 H540"/>
+              <g><circle class="nd" cx="60" cy="44" r="8"/><text class="ndlbl" x="60" y="24" text-anchor="middle">MANUFACTURER</text></g>
+              <g><circle class="nd" cx="300" cy="44" r="9"/><text class="ndlbl" x="300" y="24" text-anchor="middle">LOCAL POINT OF CONTACT</text></g>
+              <g><circle class="nd" cx="540" cy="44" r="8"/><text class="ndlbl" x="540" y="24" text-anchor="middle">UK MARKET</text></g>
+            </svg>
+          </div>
+          <div class="seq3 relaylbls">
+            <div class="s" data-sq="1"><span class="n">01</span><strong>You are outside the UK</strong><p>Expanding a product range here, or not yet represented at all.</p></div>
+            <div class="s" data-sq="2"><span class="n">02</span><strong>We act as your local contact</strong><p>Managing the relationships, and answering the phone in the same time zone as your customers.</p></div>
+            <div class="s" data-sq="3"><span class="n">03</span><strong>Your products get represented properly</strong><p>By someone who has sold engines into this market since the 1970s.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="scope-note">Also available for industry associated project work</p>
+    </div>
+
+  </div></div>
+
+  <div class="ctaband"><div class="wrap">
+    <div><h2>Which of these four is the one costing you money?</h2><p>A short call will establish it. No charge, no obligation.</p></div>
+    <div class="acts"><a class="btn btn-solid" href="#contact">Send an enquiry &nbsp;&rarr;</a><a class="btn btn-ghost" href="tel:+447368114011">Call +44 (0)7368 114011</a></div>
+  </div></div>
+</section>
+
+<!-- ============================== TRACK RECORD ============================== -->
+<section class="page" id="page-track" aria-label="Track record">
+  <div class="band" style="padding-bottom:0"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 04</span><span class="sheet-ttl">Track record</span><span class="sheet-rev">1975 to date</span></div>
+    <h1 class="sec" style="font-size:clamp(32px,4.4vw,56px);font-weight:800">New as a consultancy.<br>Not a new consultant.</h1>
+    <p class="lead" style="margin-top:24px;max-width:64ch">Combustion Consulting is taking on its first engagements. Graham Dunn has been doing this work since 1975, in the roles below, for three engine manufacturers and the UK&rsquo;s sole importer of two more. The experience on this page was built in those roles rather than as a consultant, and it is set out that way on purpose.</p>
+    <p class="lead dim" style="margin-top:16px;max-width:64ch">Client results will be published here as engagements complete.</p>
+
+    <div class="scope run" style="margin-top:clamp(28px,3vw,44px)">
+      <div class="scope-hd"><span>Career, 1975 to date &nbsp;·&nbsp; <b>Rev A</b></span><span>Bar width is time served</span></div>
+      <div class="scope-body">
+        <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+        <div class="tl">
+          <svg viewBox="0 8 456 104" role="img" aria-label="Career timeline from 1975 to 2026, bar width proportional to years served">
+            <rect class="seg-bg" x="20" y="46" width="400" height="26"/>
+            <g data-s="1"><rect class="seg" x="20" y="46" width="77" height="26"/></g>
+            <g data-s="2"><rect class="seg" x="98" y="46" width="38" height="26"/></g>
+            <g data-s="3"><rect class="seg" x="137" y="46" width="101" height="26"/></g>
+            <g data-s="4"><rect class="seg" x="239" y="46" width="181" height="26"/></g>
+            <rect class="ph" x="20" y="38" width="1.6" height="42"/>
+            <path class="rail" d="M20 80v8M98 80v6M137 80v6M239 80v8M420 80v8"/>
+            <text class="tl-ax" x="20" y="100" text-anchor="start">1975</text>
+            <text class="tl-ax" x="239" y="100" text-anchor="middle">2003</text>
+            <text class="tl-ax" x="424" y="100" text-anchor="end">2026</text>
+            <text class="tl-ax" x="58" y="38" text-anchor="middle" style="letter-spacing:.06em">10 YRS</text>
+            <text class="tl-ax" x="117" y="38" text-anchor="middle" style="letter-spacing:.06em">5</text>
+            <text class="tl-ax" x="187" y="38" text-anchor="middle" style="letter-spacing:.06em">13 YRS</text>
+            <text class="tl-ax" x="329" y="38" text-anchor="middle" style="letter-spacing:.06em">23 YRS</text>
+          </svg>
+
+        </div>
+      </div>
+      <div class="scope-cap tl-cap">
+        <div class="cap" data-s="1"><span class="ck">to 1985 &nbsp;&middot;&nbsp; Petter Diesels</span><p>Apprentice of the Year 1975, then the drawing office, then Area Sales Manager across East Anglia, London, the south east and northern Europe.</p></div>
+        <div class="cap" data-s="2"><span class="ck">1985 to 1990 &nbsp;&middot;&nbsp; Lister-Petter</span><p>Export Sales Manager for the Middle East, Product Manager launching a new welding set range, then OEM Sales Manager for North America, northern Europe and Scandinavia.</p></div>
+        <div class="cap" data-s="3"><span class="ck">1990 to 2003 &nbsp;&middot;&nbsp; DEUTZ UK</span><p>Parts division sales and marketing, then Manager of the Southern Service Centre with 14 reporting and the profit and loss account, then Sales Manager for Aftersales.</p></div>
+        <div class="cap" data-s="4"><span class="ck">2003 to 2026 &nbsp;&middot;&nbsp; E P Barrus</span><p>Area Sales Manager. John Deere and Yanmar industrial diesels, Toyota gas and Kawasaki petrol engines, to OEMs and through distributors.</p></div>
+      </div>
+</div>
+      <p class="scope-note">Four employers, three engine manufacturers and an importer, in one industry throughout</p>
+    </div>
+  </div></div>
+
+  <!-- career track record -->
+  <div class="band"><div class="wrap">
+    <h2 class="sec" style="margin-bottom:10px">Fifty years, four employers, one industry</h2>
+    <p class="lead dim" style="max-width:62ch;margin-bottom:38px">Apprentice to Area Sales Manager at one company, then thirteen years running parts, service and aftersales at Deutz. Employers are named, their customers are not.</p>
+    <div class="roles" data-rise>
+      <article class="role">
+        <div>
+          <span class="rk">2003 to 2026 &nbsp;&middot;&nbsp; 23 years</span>
+          <h3>E P Barrus Ltd</h3>
+          <span class="yrs">Area Sales Manager</span>
+        </div>
+        <div class="body">
+          <p>West Midlands, London, central and southern England. Barrus is the sole UK importer of John Deere and Yanmar industrial diesels, Toyota gas engines and Loncin petrol engines, and the main UK distributor of Kawasaki petrol engines.</p>
+          <p class="moved">Engine sales to industrial, construction and marine OEMs. Engine and parts sales through a distributor network. Sales plans, forecasting, sales monitoring and profit achievement.</p>
+        </div>
+      </article>
+      <article class="role">
+        <div>
+          <span class="rk">1990 to 2003 &nbsp;&middot;&nbsp; 13 years</span>
+          <h3>DEUTZ UK Limited</h3>
+          <span class="yrs">Three roles &nbsp;&middot;&nbsp; part of DEUTZ AG, Germany</span>
+        </div>
+        <div class="body">
+          <p><strong>Sales Manager, Aftersales, 2001 to 2003.</strong> Three sales engineers reporting. Service, parts and exchange engine sales, sales and budget plans, profit achievement.</p>
+          <p><strong>Manager, Southern Service Centre, 1996 to 2001.</strong> Fourteen people reporting: three sales and service administrators, three workshop engineers and eight area service engineers. Recruitment, management and deployment of engineers, warranty, budgets, and the profit and loss account.</p>
+          <p><strong>Sales &amp; Marketing Manager, Parts Division, 1990 to 1996.</strong> Eight people reporting. Industrial, construction and marine markets, through a network of distributors, stockists and service centres.</p>
+          <p class="moved">Stated achievements in that division: established a marketing and sales strategy, established a co-ordinated parts and service centre operation, increased market share, and improved sales volume and revenue.</p>
+        </div>
+      </article>
+      <article class="role">
+        <div>
+          <span class="rk">1985 to 1990 &nbsp;&middot;&nbsp; 5 years</span>
+          <h3>Lister-Petter Limited</h3>
+          <span class="yrs">Three roles &nbsp;&middot;&nbsp; diesel engines to 200 bhp</span>
+        </div>
+        <div class="body">
+          <p><strong>OEM Sales Manager, 1988 to 1990.</strong> North America, northern Europe and Scandinavia. Presenting and negotiating a new engine range, training and motivating distributors.</p>
+          <p><strong>Product Manager, 1986 to 1988.</strong> Development and introduction of a new range of welding sets, from product marketing through to sales plans and forecasting.</p>
+          <p><strong>Export Sales Manager, 1985 to 1988.</strong> Middle East, engines and parts. Distributor management, training and product support, market pricing and profit achievement.</p>
+        </div>
+      </article>
+      <article class="role">
+        <div>
+          <span class="rk">to 1985 &nbsp;&middot;&nbsp; from the tools up</span>
+          <h3>Petter Diesels</h3>
+          <span class="yrs">Apprentice to Area Sales Manager</span>
+        </div>
+        <div class="body">
+          <p><strong>Area Sales Manager, 1984 to 1985,</strong> southern England and northern Europe. <strong>1979 to 1984,</strong> East Anglia, London and the south east. Engine sales to industrial, construction and marine OEMs, plus distributor management, training and product support.</p>
+          <p><strong>Assistant to the European Sales Manager, 1978 to 1979. Draughtsman, 1975 to 1978,</strong> on componentry and jig and fixture design for manufacture.</p>
+          <p class="moved">Before any of it, a five year indentured technical engineering apprenticeship at Petter Diesels, and Apprentice of the Year in 1975. Fifty years on, still in the same industry.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="scope run" style="margin-top:clamp(28px,3vw,46px)">
+      <div class="scope-hd"><span>Engine brands &nbsp;·&nbsp; <b>Rev A</b></span><span>6 marques, 50 years</span></div>
+      <div class="scope-body" style="padding:0">
+        <div class="plates">
+          <span class="sel"></span>
+          <div class="seq5 plategrid">
+            <div class="s" data-sq="1"><b>Petter &amp; Lister-Petter</b><span>to 1990</span><em>Diesel engines to 200 bhp. Apprenticeship and drawing office, then selling them across the UK, the Middle East, North America and Scandinavia.</em></div>
+            <div class="s" data-sq="2"><b>Deutz</b><span>1990 to 2003</span><em>Parts division sales and marketing, the southern service centre, then aftersales. Thirteen years on parts and service revenue.</em></div>
+            <div class="s" data-sq="3"><b>John Deere</b><span>2003 to 2026</span><em>Industrial diesels to industrial, construction and marine OEMs, and through the distributor network.</em></div>
+            <div class="s" data-sq="4"><b>Yanmar</b><span>2003 to 2026</span><em>Industrial diesels, same territory and same customer base, for the sole UK importer.</em></div>
+            <div class="s" data-sq="5"><b>Kawasaki &amp; Toyota</b><span>2003 to 2026</span><em>Kawasaki petrol engines and Toyota gas engines, alongside the diesel ranges.</em></div>
+          </div>
+
+        </div>
+      </div>
+      <p class="scope-note">Three engine manufacturers and one of the UK&rsquo;s larger importers, all in industrial power</p>
+    </div>
+
+  </div></div>
+
+  <!-- the metrics: no claims needed, publishable today -->
+  <div class="band band-alt"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 04.1</span><span class="sheet-ttl">Method</span><span class="sheet-rev">27 measures</span></div>
+    <h2 class="sec">The numbers we work on</h2>
+    <p class="lead" style="margin-top:20px;max-width:66ch">These are the measures each service area moves. If you already track them, we start from your figures. If you do not, establishing them is the first piece of work.</p>
+    <div class="metrics" style="margin-top:44px" data-rise>
+      <div class="mg">
+        <span class="mk">01</span>
+        <h3>Sales strategy &amp; business development</h3>
+        <ul>
+          <li>Market share by territory and product line</li>
+          <li>Order intake against forecast, and forecast accuracy</li>
+          <li>Price realisation against list, and where discount goes without a reason</li>
+          <li>Win rate on quoted opportunities</li>
+          <li>New accounts opened against accounts lapsed</li>
+          <li>Enquiry to order conversion, and time to quote</li>
+        </ul>
+      </div>
+      <div class="mg">
+        <span class="mk">02</span>
+        <h3>Aftersales growth &amp; parts revenue</h3>
+        <ul>
+          <li>Installed engine population by territory, the denominator for everything else</li>
+          <li>Parts revenue per engine in the field</li>
+          <li>Gross margin split by captive and competitive lines</li>
+          <li>First pick availability, and next day fulfilment against it</li>
+          <li>Exchange and core return take-up against new unit sales</li>
+          <li>Warranty cost per engine, and recovery against the manufacturer</li>
+          <li>Absorption: aftersales gross profit against fixed overhead</li>
+        </ul>
+      </div>
+      <div class="mg">
+        <span class="mk">03</span>
+        <h3>Service centre &amp; field operations</h3>
+        <ul>
+          <li>Engineer utilisation and labour recovery against standard times</li>
+          <li>Repairs completed on site, against total attendances</li>
+          <li>Attendance time from callout, and time to repair</li>
+          <li>Jobs completed per engineer per day</li>
+          <li>Rework and repeat visit rate</li>
+          <li>Revenue and gross profit per engineer</li>
+        </ul>
+      </div>
+      <div class="mg">
+        <span class="mk">04</span>
+        <h3>Distributor &amp; dealer network</h3>
+        <ul>
+          <li>Territory coverage, and the white space left in it</li>
+          <li>Appointed, authorised and stockist tiers, and what each is actually allowed to do</li>
+          <li>Reorder frequency and stock turns per distributor</li>
+          <li>Share of wallet against competing lines</li>
+          <li>Time from onboarding to first order</li>
+          <li>Training completion against certification requirement</li>
+          <li>Distributor gross margin, as they see it</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lead dim" style="margin-top:32px;max-width:64ch">Several of these are figures most manufacturers cannot produce on request. That is usually where the money is.</p>
+  </div></div>
+
+  <!-- founding engagements -->
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 04.2</span><span class="sheet-ttl">Founding engagements</span><span class="sheet-rev">Two days, fixed scope</span></div>
+    <div class="offer" data-rise><div class="offer-in">
+      <div>
+        <h2>The two day review</h2>
+        <p class="lead" style="margin-top:20px">Two days on site, with the sales, parts and service managers interviewed separately, working from your own figures. It stands on its own: a written report you can act on whether or not we ever work together again.</p>
+        <p class="lead dim" style="margin-top:16px">Combustion Consulting is new, and a new consultancy has one thing to prove. So a limited number of first reviews run at a reduced rate, and in return we ask permission to publish the result here, named or anonymised as you prefer. Ask about the terms and we will set them out plainly.</p>
+        <p style="margin-top:30px"><a class="btn btn-solid" href="#contact">Ask about a founding review &nbsp;&rarr;</a></p>
+      </div>
+      <div>
+        <p class="mono" style="margin-bottom:16px">What you get</p>
+        <ul class="bullets">
+          <li><span class="bar"></span><span>Parts gross margin by category, and where discount is going without a reason</span></li>
+          <li><span class="bar"></span><span>Service labour recovery and absorption rate, against what the site should be achieving</span></li>
+          <li><span class="bar"></span><span>Stock profile: what is not moving, and what the obsolescence is actually costing</span></li>
+          <li><span class="bar"></span><span>The distributor picture by territory: who sells, who only stocks, and which agreements are unmanaged</span></li>
+          <li><span class="bar"></span><span>A written report with a ranked list of moves, the money attached to each, and who has to do them</span></li>
+          <li><span class="bar"></span><span>One presentation to the management team</span></li>
+        </ul>
+        <p class="mono" style="margin-top:22px;text-transform:none;letter-spacing:.03em;font-size:13px">Anything beyond the review is quoted separately, and is entirely optional.</p>
+      </div>
+    </div></div>
+  </div></div>
+
+<div class="wrap">
+    <div><h2>Fifty years of it, and a rate that reflects a standing start</h2><p>Graham will tell you on the first call whether your problem is one he has solved before.</p></div>
+    <div class="acts"><a class="btn btn-solid" href="#contact">Send an enquiry &nbsp;&rarr;</a><a class="btn btn-ghost" href="tel:+447368114011">Call +44 (0)7368 114011</a></div>
+  </div></div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section class="page" id="page-about" aria-label="About">
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 04</span><span class="sheet-ttl">About</span><span class="sheet-rev">Graham Dunn</span></div>
+    <div class="bio">
+      <div class="plate">
+        <div class="plate-hd"><span class="mono mono-lime">Fig. 1</span><span class="mono">Industry Consultant</span></div>
+        <figure>
+          <img src="/graham-dunn.webp" width="346" height="359" alt="Graham Dunn, Industry Consultant at Combustion Consulting" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="noimg">Portrait &nbsp;·&nbsp; Graham Dunn</div>
+        </figure>
+        <div class="nameplate"><strong>Graham Dunn</strong><span>Since 1975</span></div>
+      </div>
+      <div>
+        <h1 class="sec" style="font-size:clamp(30px,4vw,50px);font-weight:800">About</h1>
+        <p class="lead" style="margin-top:22px">Led by seasoned Sales, Aftersales and Service professionals with more than 40 years of hands-on experience, Combustion Consulting is focused on helping manufacturers, OEMs, distributors and service organisations strengthen their commercial performance and deliver customer value.</p>
+
+        <p class="lead" style="margin-top:18px">A sales, aftersales and service manager with a proven track record in the diesel engine sales and parts and service market, building and establishing successful sales and service teams.</p>
+        <h3 class="sub" style="margin:38px 0 6px">We specialise in helping businesses:</h3>
+        <ul class="checks">
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Grow sales and expand market share</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Increase aftersales revenue and service profitability</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Improve dealer and distributor performance</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Enhance operational efficiency across service centres and field teams</span></li>
+        </ul>
+
+        <p class="lead" style="margin-top:34px;border-left:2px solid var(--lime);padding-left:20px">At Combustion Consulting, we believe in clear insight, actionable planning and delivering measurable results - not theory.</p>
+        <div class="scope run" style="margin-top:34px">
+          <div class="scope-hd"><span>How the work runs &nbsp;·&nbsp; <b>Rev A</b></span><span>Insight to results</span></div>
+          <div class="scope-body">
+            <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+            <div class="relay">
+              <div class="wirebox">
+                <svg viewBox="0 0 600 96" role="img" aria-label="Clear insight, then actionable planning, then measurable results. The branch to theory is never taken.">
+                  <path class="ln" d="M60 40 H540"/>
+                  <path class="pulse" d="M60 40 H540"/>
+                  <path class="dead" d="M300 40 V78 H424"/>
+                  <g><circle class="nd" cx="60" cy="40" r="8"/><text class="ndlbl" x="60" y="20" text-anchor="middle">CLEAR INSIGHT</text></g>
+                  <g><circle class="nd" cx="300" cy="40" r="8"/><text class="ndlbl" x="300" y="20" text-anchor="middle">ACTIONABLE PLANNING</text></g>
+                  <g><circle class="nd" cx="540" cy="40" r="8"/><text class="ndlbl" x="540" y="20" text-anchor="middle">MEASURABLE RESULTS</text></g>
+                  <text class="deadlbl" x="432" y="81" text-anchor="start">THEORY</text>
+                  <path class="dead" d="M488 74 l12 12 M500 74 l-12 12"/>
+                </svg>
+              </div>
+              <div class="seq3 relaylbls">
+                <div class="s" data-sq="1"><span class="n">01</span><strong>Clear insight</strong><p>Working from your sales, parts and service figures rather than from an opinion about them.</p></div>
+                <div class="s" data-sq="2"><span class="n">02</span><strong>Actionable planning</strong><p>A plan with owners and dates that the business can actually absorb.</p></div>
+                <div class="s" data-sq="3"><span class="n">03</span><strong>Measurable results</strong><p>Movement in the numbers you already report on, not a document.</p></div>
+              </div>
+            </div>
+          </div>
+          <p class="scope-note">The branch marked theory is drawn because it is the one that never gets taken</p>
+        </div>
+
+
+        <h3 class="sub" style="margin:40px 0 6px">Who we work with:</h3>
+        <ul class="checks">
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Manufacturers seeking UK/EU market insight or sales expansion</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>OEMs requiring sales development planning</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Distributors and dealers aiming to improve performance, training and profitability</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Service centres needing operational restructuring or process optimisation</span></li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Organisations launching new products, components, or service programmes</span></li>
+        </ul>
+
+        <h3 class="sub" style="margin:44px 0 16px">Regions led</h3>
+        <div class="scope run" style="margin-top:20px">
+          <div class="scope-hd"><span>Regions led &nbsp;·&nbsp; <b>Rev A</b></span><span>6 territories</span></div>
+          <div class="scope-body">
+            <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+            <div class="scope-grid">
+              <div class="radar" role="img" aria-label="Sweep over the six regions Graham has led teams in">
+                <div class="rings"><i></i><i></i><i></i><i></i></div>
+                <div class="cross"><i></i><i></i></div>
+                <div class="beam"></div>
+                <div class="arm"></div>
+              </div>
+              <ul class="regions-live">
+                <li><span class="rd"></span><strong>United Kingdom</strong></li>
+                <li><span class="rd"></span><strong>Northern Europe</strong></li>
+                <li><span class="rd"></span><strong>Scandinavia</strong></li>
+                <li><span class="rd"></span><strong>North America</strong></li>
+                <li><span class="rd"></span><strong>Middle East</strong></li>
+                <li><span class="rd"></span><strong>Africa</strong></li>
+              </ul>
+            </div>
+          </div>
+          <p class="scope-note">Sales, service and parts teams led in all six</p>
+        </div>
+
+
+        <div style="margin-top:46px">
+          <h3 class="sub" style="margin-bottom:8px">Career summary</h3>
+          <p class="dim" style="font-size:15px;max-width:60ch">Kept deliberately short here. The scope of each role sits on the track record page.</p>
+          <ol class="career">
+            <li class="now"><span class="cy">2026 to present</span><span class="ct">Industry Consultant</span><span class="ce">Combustion Consulting</span></li>
+            <li><span class="cy">2003 to 2026</span><span class="ct">Area Sales Manager</span><span class="ce">E P Barrus Ltd &nbsp;&middot;&nbsp; West Midlands, London, central and southern England</span></li>
+            <li><span class="cy">2001 to 2003</span><span class="ct">Sales Manager, Aftersales</span><span class="ce">DEUTZ UK Limited &nbsp;&middot;&nbsp; 3 reporting</span></li>
+            <li><span class="cy">1996 to 2001</span><span class="ct">Manager, Southern Service Centre</span><span class="ce">DEUTZ UK Limited &nbsp;&middot;&nbsp; 14 reporting, profit and loss</span></li>
+            <li><span class="cy">1990 to 1996</span><span class="ct">Sales &amp; Marketing Manager, Parts Division</span><span class="ce">DEUTZ UK Limited &nbsp;&middot;&nbsp; 8 reporting</span></li>
+            <li><span class="cy">1988 to 1990</span><span class="ct">OEM Sales Manager</span><span class="ce">Lister-Petter &nbsp;&middot;&nbsp; North America, northern Europe, Scandinavia</span></li>
+            <li><span class="cy">1986 to 1988</span><span class="ct">Product Manager</span><span class="ce">Lister-Petter &nbsp;&middot;&nbsp; new welding set range</span></li>
+            <li><span class="cy">1985 to 1988</span><span class="ct">Export Sales Manager</span><span class="ce">Lister-Petter &nbsp;&middot;&nbsp; Middle East</span></li>
+            <li><span class="cy">1979 to 1985</span><span class="ct">Area Sales Manager</span><span class="ce">Petter Diesels &nbsp;&middot;&nbsp; East Anglia and London, then southern England and northern Europe</span></li>
+            <li><span class="cy">1975 to 1979</span><span class="ct">Draughtsman, then assistant to the European Sales Manager</span><span class="ce">Petter Diesels</span></li>
+            <li><span class="cy">to 1975</span><span class="ct">Five year indentured technical engineering apprenticeship</span><span class="ce">Petter Diesels &nbsp;&middot;&nbsp; Apprentice of the Year, 1975</span></li>
+          </ol>
+          <h3 class="sub" style="margin:44px 0 6px">Qualifications</h3>
+          <ul class="checks">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Mechanical Engineering Technician, Parts I, II and III, passed with credit</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Certificate in Quality Control</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Five year indentured technical engineering apprenticeship, Petter Diesels</span></li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8.6l4 4L14 4"/></svg><span>Apprentice of the Year, 1975</span></li>
+          </ul>
+          <p style="margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/graham-dunn-a913752/" target="_blank" rel="noopener noreferrer">Graham on LinkedIn &nearr;</a>
+            
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="ctaband"><div class="wrap">
+    <div><h2>Forty years of it, and still answering the phone himself</h2><p>Enquiries reach Graham directly.</p></div>
+    <div class="acts"><a class="btn btn-solid" href="#contact">Send an enquiry &nbsp;&rarr;</a><a class="btn btn-ghost" href="tel:+447368114011">Call +44 (0)7368 114011</a></div>
+  </div></div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="page" id="page-contact" aria-label="Contact">
+  <div class="band"><div class="wrap">
+    <div class="sheet"><span class="sheet-ref">Sheet 05</span><span class="sheet-ttl">Contact</span><span class="sheet-rev">Reply within one working day</span></div>
+    <div class="contact-grid">
+      <div>
+        <h1 class="sec" style="font-size:clamp(30px,4vw,50px);font-weight:800">Contact us</h1>
+        <p class="lead" style="margin-top:20px;max-width:56ch">Tell us what is not working. Graham reads every enquiry himself and will tell you plainly whether it is something he can help with.</p>
+
+        <form class="enq" id="enquiry" style="margin-top:38px" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New enquiry from the Combustion Consulting website">
+          <input type="hidden" name="from_name" value="Combustion Consulting website">
+          <p hidden><label>Leave this empty <input type="checkbox" name="botcheck"></label></p>
+          <div class="field">
+            <label for="f-name">Name <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Work email <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+            <span class="hint">Optional. Useful if you would rather Graham rang you.</span>
+          </div>
+          <div class="field">
+            <label for="f-msg">Write a message</label>
+            <textarea id="f-msg" name="message" placeholder="Which of sales, aftersales, service centre or distributor network is the issue, and what has already been tried?"></textarea>
+          </div>
+          <p class="privacy">We use your details only to answer your enquiry. We keep enquiries for 24 months, then delete them. We will not add you to a mailing list or share your details. <a href="#contact">Privacy notice</a>.</p>
+          <div>
+            <button class="btn btn-solid" type="submit">Send enquiry &nbsp;&rarr;</button>
+            <p class="mono" style="margin-top:16px;text-transform:none;letter-spacing:.02em">Graham replies personally, within one working day</p>
+          </div>
+        </form>
+      </div>
+
+      <div style="display:grid;gap:26px">
+      <div class="scope run">
+        <div class="scope-hd"><span>Enquiry routes &nbsp;·&nbsp; <b>Rev A</b></span><span>3 in, 1 person</span></div>
+        <div class="scope-body">
+          <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+          <div class="routes">
+            <div class="col1">
+              <div class="r"><span class="rd"></span><strong>Enquiry form</strong></div>
+              <div class="r"><span class="rd"></span><strong>Telephone</strong></div>
+              <div class="r"><span class="rd"></span><strong>WhatsApp</strong></div>
+            </div>
+            <div class="wires">
+              <svg viewBox="0 0 62 132" preserveAspectRatio="none" aria-hidden="true">
+                <path class="wire-bg" d="M0 22 H30 V66 H62"/><path class="wire-bg" d="M0 66 H62"/><path class="wire-bg" d="M0 110 H30 V66 H62"/>
+                <path class="wire" data-s="1" d="M0 22 H30 V66 H62"/>
+                <path class="wire" data-s="2" d="M0 66 H62"/>
+                <path class="wire" data-s="3" d="M0 110 H30 V66 H62"/>
+              </svg>
+            </div>
+            <div class="dest"><span class="ring"></span><span>Reaches</span><strong>Graham</strong></div>
+          </div>
+        </div>
+        <p class="scope-note">No account manager, no handover, no call centre</p>
+      </div>
+      <div class="scope run">
+        <div class="scope-hd"><span>Response &nbsp;·&nbsp; <b>Rev A</b></span><span>One working day</span></div>
+        <div class="scope-body">
+          <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+          <div class="dial">
+            <div class="face">
+              <svg viewBox="0 0 120 120" role="img" aria-label="An enquiry answered within one working day">
+                <circle class="arcbg" cx="60" cy="60" r="45"/>
+                <circle class="arc" cx="60" cy="60" r="45"/>
+                <text class="ctr" x="60" y="58" text-anchor="middle">1 DAY</text>
+                <text class="ctr2" x="60" y="72" text-anchor="middle">OR SOONER</text>
+              </svg>
+            </div>
+            <div class="seq3 dialsteps">
+              <div class="s" data-sq="1"><i></i><div><strong>Enquiry arrives</strong><span>Form, phone or WhatsApp</span></div></div>
+              <div class="s" data-sq="2"><i></i><div><strong>Graham reads it himself</strong><span>Not an inbox, not an assistant</span></div></div>
+              <div class="s" data-sq="3"><i></i><div><strong>You get a straight answer</strong><span>Including whether he can help</span></div></div>
+            </div>
+          </div>
+        </div>
+        <p class="scope-note">If it is not something he can help with, he will tell you on the first reply</p>
+      </div>
+      <aside class="contact-card">
+        <h2 class="sub" style="margin-bottom:24px">Contact Us</h2>
+        <dl>
+          <div><dt>Response</dt><dd>Within one working day, from Graham himself</dd></div>
+          <div><dt>Telephone</dt><dd class="big"><a href="tel:+447368114011">+44 (0)7368 114011</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:contact@combustionconsulting.co.uk">contact@combustionconsulting.co.uk</a></dd></div>
+          <div><dt>Address</dt><dd>Combustion Consulting<br>4 Astor Crescent<br>Ludgershall<br>Andover<br>SP11 9RE</dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/graham-dunn-a913752/" target="_blank" rel="noopener noreferrer">graham-dunn-a913752</a></dd></div>
+          <div><dt>Hours</dt><dd>Monday to Friday</dd></div>
+        </dl>
+        <div class="wa-card">
+          <h3>Prefer WhatsApp?</h3>
+          <p>Same number, straight to Graham's phone. Useful if you would rather fire over a couple of questions than fill in a form.</p>
+          <a class="btn btn-solid" href="https://wa.me/447368114011?text=Hello%20Graham%2C%20I%20found%20Combustion%20Consulting%20online%20and%20would%20like%20to%20talk%20about%20" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5c0 4.14-4.03 7.5-9 7.5a10 10 0 0 1-2.6-.34L4 21l1.2-3.5A7.02 7.02 0 0 1 3 11.5C3 7.36 7.03 4 12 4s9 3.36 9 7.5z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg> Message on WhatsApp</a>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<a class="wa-float" href="https://wa.me/447368114011?text=Hello%20Graham%2C%20I%20found%20Combustion%20Consulting%20online%20and%20would%20like%20to%20talk%20about%20" target="_blank" rel="noopener noreferrer" aria-label="Message Combustion Consulting on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5c0 4.14-4.03 7.5-9 7.5a10 10 0 0 1-2.6-.34L4 21l1.2-3.5A7.02 7.02 0 0 1 3 11.5C3 7.36 7.03 4 12 4s9 3.36 9 7.5z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg> <span>WhatsApp</span></a>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-logo">
+        <img src="/logo.webp" alt="Combustion Consulting" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="fallback">com<b>b</b>ustion<br>CONSULTING</span>
+        <p class="dim" style="font-size:15px;max-width:34ch">Product sales planning, aftersales and service strategy for the industrial engineering and OEM product sectors.</p>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Sales Strategy</a></li>
+          <li><a href="#services">Aftersales Growth</a></li>
+          <li><a href="#services">Service Centre Improvement</a></li>
+          <li><a href="#services">Distributor &amp; Dealer Network Development</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#track">Track record</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/graham-dunn-a913752/" target="_blank" rel="noopener noreferrer">Graham on LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contact Us</h4>
+        <p class="f-addr">
+          <strong>Combustion Consulting</strong>
+          4 Astor Crescent<br>Ludgershall<br>Andover<br>SP11 9RE<br><br>
+          Tel: <a href="tel:+447368114011">+44 (0)7368 114011</a><br>
+          Email: <a href="mailto:contact@combustionconsulting.co.uk">contact@combustionconsulting.co.uk</a>
+        </p>
+      </div>
+    </div>
+    <div class="f-legal">
+      <p>&copy; 2026 Graham Dunn, trading as Combustion Consulting</p>
+      <p>4 Astor Crescent, Ludgershall, Andover SP11 9RE</p>
+      <a href="#contact">Privacy notice</a>
+      <a href="#contact">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pages = ['home','services','track','about','contact'];
+  var nav = document.getElementById('nav');
+  var burger = document.querySelector('.burger');
+  var rail = document.querySelector('.railbar span');
+
+  function show(id){
+    if(pages.indexOf(id) === -1){ id = 'home'; }
+    pages.forEach(function(p){
+      var el = document.getElementById('page-' + p);
+      if(el){ el.classList.toggle('active', p === id); }
+    });
+    document.querySelectorAll('nav.main a').forEach(function(a){
+      var t = (a.getAttribute('href') || '').replace('#','');
+      if(t === id){ a.setAttribute('aria-current','page'); } else { a.removeAttribute('aria-current'); }
+    });
+    var n = pages.indexOf(id) + 1;
+    if(rail){ rail.textContent = 'Combustion Consulting  ·  Sheet ' + n + ' of ' + pages.length; }
+    document.title = id === 'home' ? 'Combustion Consulting' : 'Combustion Consulting';
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+  }
+
+  function fromHash(){
+    show((location.hash || '#home').replace('#',''));
+  }
+
+  window.addEventListener('hashchange', fromHash);
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  fromHash();
+
+  /* ---------- motion ---------- */
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* live schematic: click a point to hold it, click again to resume the cycle */
+  var scope = document.getElementById('scope');
+  if(scope && !still){
+    var pinned = null;
+    scope.querySelectorAll('.node').forEach(function(node){
+      node.addEventListener('click', function(){
+        var i = node.getAttribute('data-i');
+        if(pinned === i){ pinned = null; } else { pinned = i; }
+        scope.classList.toggle('pinned', pinned !== null);
+        scope.classList.toggle('run', pinned === null);
+        scope.querySelectorAll('.node,.cap').forEach(function(el){
+          el.classList.toggle('on', pinned !== null && el.getAttribute('data-i') === pinned);
+        });
+        var note = scope.querySelector('.scope-note');
+        if(note){ note.textContent = pinned ? 'Click the same point to resume' : 'Click a point to hold it'; }
+      });
+    });
+  }
+
+  /* count the four figures up once, from a value that is already on screen */
+  function countUp(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var t0 = null, dur = 950;
+    function frame(t){
+      if(t0 === null){ t0 = t; }
+      var k = Math.min(1, (t - t0) / dur);
+      var eased = 1 - Math.pow(1 - k, 3);
+      el.innerHTML = Math.round(target * eased) + suffix;
+      if(k < 1){ requestAnimationFrame(frame); }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  var canObserve = 'IntersectionObserver' in window;
+
+  if(!still && canObserve){
+    /* figures */
+    var figs = document.querySelectorAll('[data-count]');
+    var fo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ countUp(e.target); fo.unobserve(e.target); }
+      });
+    }, {threshold:.6});
+    figs.forEach(function(f){ fo.observe(f); });
+
+    /* gentle rise, only for blocks that start below the fold */
+    var sel = '.bio,.cards,.router,.cases,.steps,.contact-grid,.svc,.f-top';
+    var risers = [];
+    document.querySelectorAll(sel).forEach(function(el){
+      if(el.getBoundingClientRect().top > window.innerHeight * 0.92){
+        el.classList.add('rise-init');
+        risers.push(el);
+      }
+    });
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('rise-go');
+          ro.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    risers.forEach(function(r){ ro.observe(r); });
+
+    /* safety net: nothing stays hidden, whatever happens */
+    setTimeout(function(){
+      risers.forEach(function(r){ r.classList.add('rise-go'); });
+    }, 2600);
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var form = document.getElementById('enquiry');
+  if(!form) return;
+  var KEY = form.querySelector('[name="access_key"]').value;
+  var btn  = form.querySelector('button[type="submit"]');
+
+  function note(msg){
+    var p = form.querySelector('.form-note');
+    if(!p){ p = document.createElement('p'); p.className = 'form-note';
+      p.style.cssText = 'margin-top:16px;font-size:15px;color:#E3FF64;border-left:2px solid #E3FF64;padding-left:14px';
+      btn.parentNode.appendChild(p); }
+    p.textContent = msg;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(form);
+
+    // not connected yet: hand the enquiry to the visitor's own mail client
+    if(KEY === 'WEB3FORMS_ACCESS' + '_KEY'){
+      var body = 'Name: ' + (data.get('name')||'') +
+                 '\nEmail: ' + (data.get('email')||'') +
+                 '\nCompany: ' + (data.get('company')||'') +
+                 '\nPhone: ' + (data.get('phone')||'') +
+                 '\n\n' + (data.get('message')||'');
+      window.location.href = 'mailto:contact@combustionconsulting.co.uk'
+        + '?subject=' + encodeURIComponent('Enquiry from the website')
+        + '&body=' + encodeURIComponent(body);
+      return;
+    }
+
+    btn.disabled = true;
+    var label = btn.textContent;
+    btn.textContent = 'Sending...';
+    fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j && j.success){ window.location.href = '/thanks.html'; }
+        else { throw new Error('rejected'); }
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = label;
+        note('That did not send. Please ring +44 (0)7368 114011, send a WhatsApp message to the same number, or email contact@combustionconsulting.co.uk.');
+      });
+  });
+})();
+</script>
+</body>
+</html>
